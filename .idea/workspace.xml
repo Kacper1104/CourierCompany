@@ -3,8 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/DataBase/DataBase" afterPath="$PROJECT_DIR$/DataBase/DataBase" />
       <change beforePath="$PROJECT_DIR$/src/Model/Advice.java" afterPath="$PROJECT_DIR$/src/Model/Advice.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Courier.java" afterPath="$PROJECT_DIR$/src/Model/Courier.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DeliveryCosts.java" afterPath="$PROJECT_DIR$/src/Model/DeliveryCosts.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DistList.java" afterPath="$PROJECT_DIR$/src/Model/DistList.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Package.java" afterPath="$PROJECT_DIR$/src/Model/Package.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Recipient.java" afterPath="$PROJECT_DIR$/src/Model/Recipient.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Sender.java" afterPath="$PROJECT_DIR$/src/Model/Sender.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Status.java" afterPath="$PROJECT_DIR$/src/Model/Status.java" />
+      <change beforePath="$PROJECT_DIR$/src/Model/WarehouseKeeper.java" afterPath="$PROJECT_DIR$/src/Model/WarehouseKeeper.java" />
+      <change beforePath="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java" afterPath="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -89,92 +97,7 @@
     <favorites_list name="JavaFxApplication" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="DATABASE/c0aca0c9-d466-400c-8c83-4c910919bcd1.SCHEMA:main" pinned="false" current-in-tab="true">
-        <entry file="uml://DATABASE/c0aca0c9-d466-400c-8c83-4c910919bcd1.SCHEMA:main">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>DATABASE</ID>
-              <OriginalElement>c0aca0c9-d466-400c-8c83-4c910919bcd1.SCHEMA:main</OriginalElement>
-              <nodes>
-                <node x="272.0" y="263.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy</node>
-                <node x="524.5" y="471.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka</node>
-                <node x="537.0" y="263.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status</node>
-                <node x="0.0" y="1018.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_master</node>
-                <node x="1076.0" y="235.5">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa</node>
-                <node x="1122.75" y="565.5">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
-                <node x="201.0" y="1018.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_sequence</node>
-                <node x="551.0" y="855.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo</node>
-                <node x="803.0" y="168.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca</node>
-                <node x="1094.5" y="0.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier</node>
-                <node x="0.0" y="168.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka">
-                  <point x="0.0" y="-59.0" />
-                  <point x="0.0" y="167.0" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca">
-                  <point x="54.200000000000045" y="-167.0" />
-                  <point x="714.2" y="441.0" />
-                  <point x="929.5" y="441.0" />
-                  <point x="0.0" y="126.5" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa">
-                  <point x="0.0" y="-72.5" />
-                  <point x="54.25" y="59.0" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa">
-                  <point x="108.39999999999998" y="-167.0" />
-                  <point x="768.4" y="451.0" />
-                  <point x="1130.25" y="451.0" />
-                  <point x="-54.25" y="59.0" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy">
-                  <point x="-54.200000000000045" y="-167.0" />
-                  <point x="605.8" y="441.0" />
-                  <point x="394.5" y="441.0" />
-                  <point x="0.0" y="31.5" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status">
-                  <point x="0.0" y="-167.0" />
-                  <point x="0.0" y="31.5" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca">
-                  <point x="-108.39999999999998" y="-167.0" />
-                  <point x="551.6" y="451.0" />
-                  <point x="126.0" y="451.0" />
-                  <point x="0.0" y="126.5" />
-                </edge>
-                <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier">
-                  <point x="0.0" y="-59.0" />
-                  <point x="0.0" y="59.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.8847490347490347" x="697.3670085097099" y="421.4523238053677" />
-              <SelectedNodes>
-                <node>c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Key columns</Category>
-                <Category>Columns</Category>
-              </Categories>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Advice.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Advice.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -208,6 +131,15 @@
         <option value="$PROJECT_DIR$/src/View/DistList_Overview.fxml" />
         <option value="$PROJECT_DIR$/src/sample/Main.java" />
         <option value="$PROJECT_DIR$/src/Controller/PackageCOntroller.java" />
+        <option value="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java" />
+        <option value="$PROJECT_DIR$/src/Model/WarehouseKeeper.java" />
+        <option value="$PROJECT_DIR$/src/Model/Status.java" />
+        <option value="$PROJECT_DIR$/src/Model/Sender.java" />
+        <option value="$PROJECT_DIR$/src/Model/Recipient.java" />
+        <option value="$PROJECT_DIR$/src/Model/Package.java" />
+        <option value="$PROJECT_DIR$/src/Model/DistList.java" />
+        <option value="$PROJECT_DIR$/src/Model/DeliveryCosts.java" />
+        <option value="$PROJECT_DIR$/src/Model/Courier.java" />
         <option value="$PROJECT_DIR$/src/Model/Advice.java" />
       </list>
     </option>
@@ -260,6 +192,19 @@
               <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="View" type="462c0819:PsiDirectoryNode" />
+              <item name="ReturnOfPackage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -549,7 +494,7 @@
       <workItem from="1547486045782" duration="1152000" />
       <workItem from="1547492523972" duration="712000" />
       <workItem from="1547493281083" duration="3322000" />
-      <workItem from="1547638295797" duration="2907000" />
+      <workItem from="1547638295797" duration="4751000" />
     </task>
     <task id="LOCAL-00001" summary="Structure modification">
       <created>1547486892587</created>
@@ -565,15 +510,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547496339524</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Database with connections">
+      <created>1547642081041</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547642081041</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9395000" />
+    <option name="totallyTimeSpent" value="11239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -587,7 +538,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14124598" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14124598" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15896885" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -621,7 +572,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Structure modification" />
     <MESSAGE value="Added DataBase Without tables connections" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added DataBase Without tables connections" />
+    <MESSAGE value="Database with connections" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database with connections" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -649,65 +601,9 @@
     <entry file="file://$PROJECT_DIR$/src/Model/Adresat.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/Nadawca.java" />
     <entry file="file://$PROJECT_DIR$/src/Model/Odbiorca.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/DistList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Notification.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Courier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/Delivery.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/DeliveryCosts.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Recipient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Status.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="19" lean-forward="false" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/StoreKeeper.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/WarehouseKeeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Presenter/AdvicePresenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -830,13 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/View/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="483">
@@ -952,10 +841,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Advice.java">
+    <entry file="file://$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/WarehouseKeeper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="27" lean-forward="false" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="45" lean-forward="false" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+          <folding>
+            <element signature="e#163#164#0" expanded="true" />
+            <element signature="e#215#216#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="27" lean-forward="false" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Recipient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="16" column="155" lean-forward="false" selection-start-line="16" selection-start-column="155" selection-end-line="16" selection-end-column="155" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="23" column="4" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DistList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="59" lean-forward="false" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/DeliveryCosts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <caret line="8" column="48" lean-forward="false" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+          <folding>
+            <element signature="e#221#222#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Courier.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="11" column="77" lean-forward="false" selection-start-line="11" selection-start-column="77" selection-end-line="11" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Advice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="68" lean-forward="false" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -966,65 +934,22 @@
           <ID>DATABASE</ID>
           <OriginalElement>c0aca0c9-d466-400c-8c83-4c910919bcd1.SCHEMA:main</OriginalElement>
           <nodes>
-            <node x="272.0" y="263.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy</node>
-            <node x="524.5" y="471.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka</node>
-            <node x="537.0" y="263.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status</node>
-            <node x="0.0" y="1018.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_master</node>
-            <node x="1076.0" y="235.5">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa</node>
-            <node x="1122.75" y="565.5">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
-            <node x="201.0" y="1018.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_sequence</node>
-            <node x="551.0" y="855.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo</node>
-            <node x="803.0" y="168.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca</node>
-            <node x="1094.5" y="0.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier</node>
-            <node x="0.0" y="168.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_master</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_sequence</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier</node>
+            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka">
-              <point x="0.0" y="-59.0" />
-              <point x="0.0" y="167.0" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca">
-              <point x="54.200000000000045" y="-167.0" />
-              <point x="714.2" y="441.0" />
-              <point x="929.5" y="441.0" />
-              <point x="0.0" y="126.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa">
-              <point x="0.0" y="-72.5" />
-              <point x="54.25" y="59.0" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa">
-              <point x="108.39999999999998" y="-167.0" />
-              <point x="768.4" y="451.0" />
-              <point x="1130.25" y="451.0" />
-              <point x="-54.25" y="59.0" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy">
-              <point x="-54.200000000000045" y="-167.0" />
-              <point x="605.8" y="441.0" />
-              <point x="394.5" y="441.0" />
-              <point x="0.0" y="31.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status">
-              <point x="0.0" y="-167.0" />
-              <point x="0.0" y="31.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca">
-              <point x="-108.39999999999998" y="-167.0" />
-              <point x="551.6" y="451.0" />
-              <point x="126.0" y="451.0" />
-              <point x="0.0" y="126.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier">
-              <point x="0.0" y="-59.0" />
-              <point x="0.0" y="59.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.8847490347490347" x="697.3670085097099" y="421.4523238053677" />
-          <SelectedNodes>
-            <node>c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
-          </SelectedNodes>
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.049090909090909" x="1014.8502325276141" y="612.9032200068117" />
+          <SelectedNodes />
           <Categories>
             <Category>Key columns</Category>
             <Category>Columns</Category>
