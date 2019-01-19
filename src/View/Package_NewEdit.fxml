@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label text="Dodaj paczkę">
+         <font>
+            <Font name="System Bold" size="52.0" />
+         </font>
+      </Label>
+      <Label text="Adresat:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField promptText="Imię i nazwisko" />
+      <TextField promptText="Ulica i numer domu" />
+      <TextField promptText="Kod pocztowy" />
+      <TextField promptText="Miejscowość" />
+      <Label text="Paczka:">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <TextField promptText="Koszt do zapłaty" />
+      <Label text="Opcja dostawy">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <ChoiceBox prefHeight="31.0" prefWidth="268.0" />
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Zatwierdź" />
+            <Pane prefHeight="100.0" prefWidth="698.0" />
+            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Anuluj" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+   </padding>
+</VBox>
