@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presenter.DistList_New_Presenter">
    <top>
       <Label text="Nowa lista rozwozowa" BorderPane.alignment="CENTER">
          <font>
@@ -23,12 +22,12 @@
    <bottom>
       <HBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="ok_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="OK">
+            <Button id="ok_btn" fx:id="ok_btn" mnemonicParsing="false" onMouseClicked="#onOkButtonClicked" prefHeight="50.0" prefWidth="200.0" text="OK">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button id="anuluj_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Anuluj">
+            <Button id="anuluj_btn" fx:id="anuluj_btn" mnemonicParsing="false" onMouseClicked="#onAnulujButtonClicked" prefHeight="50.0" prefWidth="200.0" text="Anuluj">
                <font>
                   <Font size="20.0" />
                </font>
@@ -49,7 +48,7 @@
                         <Font name="System Bold" size="34.0" />
                      </font>
                   </Label>
-                  <ChoiceBox prefHeight="31.0" prefWidth="239.0" />
+                  <ComboBox fx:id="kurierzy_combo_box" prefHeight="31.0" prefWidth="240.0" />
                </children>
                <HBox.margin>
                   <Insets />
@@ -93,16 +92,16 @@
                         <Insets top="100.0" />
                      </GridPane.margin>
                   </VBox>
-                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                  <ListView prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <ListView fx:id="na_liscie_listView" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
+                  <ListView fx:id="do_rozwiezienia_listView" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
                   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="50.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <children>
-                        <Button mnemonicParsing="false" prefWidth="100.0" text="&lt;">
+                        <Button fx:id="left_btn" mnemonicParsing="false" prefWidth="100.0" text="&lt;">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
                         </Button>
-                        <Button mnemonicParsing="false" prefWidth="100.0" text="&gt;">
+                        <Button fx:id="right_btn" mnemonicParsing="false" prefWidth="100.0" text="&gt;">
                            <font>
                               <Font name="System Bold" size="22.0" />
                            </font>
