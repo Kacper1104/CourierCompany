@@ -26,4 +26,7 @@ public class Sender {
         this.haslo = haslo;
     }
 
+    public Sender() {
+
+    }
 }

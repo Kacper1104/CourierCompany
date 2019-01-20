@@ -1,6 +1,7 @@
 package Model;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -11,16 +12,16 @@ public class Package {
     private String status_przesylki;
     private String opcja_dostawy;
     private BigDecimal koszt_do_zaplaty;
-    private Date data_nadania;
+    private LocalDate data_nadania;
     private boolean na_liscie_rozwozowej;
     private int proba_dostarczenia;
-    private Date ostatnia_zmiana_statusu;
+    private LocalDate ostatnia_zmiana_statusu;
     private int lista_rozwozowa_id;
     private int nadawca_id;
     private int odbiorca_id;
 
-    public Package(int id, String status_przesylki, String opcja_dostawy, BigDecimal koszt_do_zaplaty, Date data_nadania,
-                   boolean na_liscie_rozwozowej, int proba_dostarczenia, Date ostatnia_zmiana_statusu, int lista_rozwozowa_id, int nadawca_id, int odbiorca_id)
+    public Package(int id, String status_przesylki, String opcja_dostawy, BigDecimal koszt_do_zaplaty, LocalDate data_nadania,
+                   boolean na_liscie_rozwozowej, int proba_dostarczenia, LocalDate ostatnia_zmiana_statusu, int lista_rozwozowa_id, int nadawca_id, int odbiorca_id)
     {
         this.id = id;
         this.status_przesylki = status_przesylki;
@@ -36,7 +37,8 @@ public class Package {
     }
 
 
-    public Package(String status_przesylki, String opcja_dostawy, BigDecimal koszt_do_zaplaty)
+    public Package(String status_przesylki, String opcja_dostawy, BigDecimal koszt_do_zaplaty, LocalDate data_nadania,
+                   boolean na_liscie_rozwozowej, int proba_dostarczenia, LocalDate ostatnia_zmiana_statusu, int nadawca_id, int odbiorca_id)
     {
         this.status_przesylki = status_przesylki;
         this.opcja_dostawy = opcja_dostawy;

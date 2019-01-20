@@ -40,7 +40,6 @@ public class View_Presenter extends Application {
 
     @FXML
     public void nadajPrzesylkeZwrotnaClicked() throws IOException {
-        System.out.println("jestem");
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/ReturnOfPackage/ID_Choice.fxml"));
         Stage stage = (Stage) nadaj_przesylke_zwrotna_btn.getScene().getWindow();
         stage.setScene(new Scene(root));

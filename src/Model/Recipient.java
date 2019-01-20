@@ -24,4 +24,8 @@ public class Recipient {
         this.login = login;
         this.haslo = haslo;
     }
+
+    public Recipient() {
+
+    }
 }

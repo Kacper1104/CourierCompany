@@ -8,8 +8,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presenter.ReturnOfPackage_Presenter">
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="100.0" BorderPane.alignment="CENTER">
          <children>
@@ -21,12 +20,12 @@
                   <Insets />
                </VBox.margin>
             </Label>
-            <TextField id="identyfikator_TextField" maxHeight="1.7976931348623157E308" maxWidth="500.0" promptText="Identyfikator">
+            <TextField fx:id="identyfikator_txt" maxHeight="1.7976931348623157E308" maxWidth="500.0" promptText="Identyfikator">
                <font>
                   <Font size="30.0" />
                </font>
             </TextField>
-            <Button id="wybierz_btn" mnemonicParsing="false" text="Wybierz">
+            <Button fx:id="wybierz_btn" mnemonicParsing="false" onMouseClicked="#onClickWybierz" text="Wybierz">
                <font>
                   <Font size="25.0" />
                </font>
