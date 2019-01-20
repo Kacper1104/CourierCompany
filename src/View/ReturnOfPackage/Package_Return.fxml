@@ -10,16 +10,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presenter.Package_Return_Presenter">
    <bottom>
       <HBox alignment="CENTER" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button id="ok_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="OK">
+            <Button id="ok_btn" fx:id="ok_btn" mnemonicParsing="false" onMouseClicked="#onClickOkButton" prefHeight="50.0" prefWidth="200.0" text="OK">
                <font>
                   <Font size="20.0" />
                </font>
             </Button>
-            <Button id="anuluj_btn" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Anuluj">
+            <Button id="anuluj_btn" fx:id="anuluj_btn" mnemonicParsing="false" onMouseClicked="#onClickAnulujButton" prefHeight="50.0" prefWidth="200.0" text="Anuluj">
                <font>
                   <Font size="20.0" />
                </font>
@@ -83,7 +83,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label text="-">
+                  <Label fx:id="status_przed" text="-">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -97,7 +97,7 @@
                         <Font size="25.0" />
                      </font>
                   </Label>
-                  <Label text="-">
+                  <Label fx:id="status_po" text="-">
                      <font>
                         <Font name="System Bold" size="25.0" />
                      </font>
@@ -133,7 +133,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="imie_i_naz_nad_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -147,7 +147,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="ulica_nad_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -161,7 +161,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="kod_nad_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -175,7 +175,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="miejscowosc_nad_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -195,7 +195,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="imie_i_naz_nad_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -209,7 +209,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="ulica_nad_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -223,7 +223,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="kod_nad_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -237,7 +237,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="miejscowosc_nad_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -258,7 +258,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="imie_i_naz_od_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -272,7 +272,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="ulica_od_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -286,7 +286,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="kod_odb_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -300,7 +300,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="miejscowosc_od_przed" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -321,7 +321,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="imie_i_naz_od_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -335,7 +335,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="ulica_od_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -349,7 +349,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="kod_odb_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>
@@ -363,7 +363,7 @@
                               <Font size="20.0" />
                            </font>
                         </Label>
-                        <Label text="-">
+                        <Label fx:id="miejscowosc_od_po" text="-">
                            <font>
                               <Font size="20.0" />
                            </font>

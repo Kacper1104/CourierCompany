@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
@@ -23,9 +24,12 @@ public class ReturnOfPackage_Presenter {
     @FXML
     TextField identyfikator_txt;
 
+
+
+
+
     static int package_id_to_return;
-    private Sender nadawca;
-    private Recipient odbiorca;
+
 
     @FXML
     public void onClickWybierz() throws IOException {
@@ -35,8 +39,7 @@ public class ReturnOfPackage_Presenter {
         if (existInBase(id))
         {
             package_id_to_return = id;
-            nadawca = findSender(id);
-            odbiorca = findRecpient(id);
+
 
 
             Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/ReturnOfPackage/Package_Return.fxml"));
@@ -46,6 +49,7 @@ public class ReturnOfPackage_Presenter {
         else
         {
             //okno o niepoprawności
+
         }
     }
 
@@ -72,17 +76,7 @@ public class ReturnOfPackage_Presenter {
     }
 
 
-    private Sender findSender(int id)
-    {
-        //to do
-        return new Sender();
-    }
 
-    private Recipient findRecpient(int id)
-    {
-        //to do
-        return new Recipient();
-    }
 
 
 }
