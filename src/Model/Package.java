@@ -34,4 +34,19 @@ public class Package {
         this.nadawca_id = nadawca_id;
         this.odbiorca_id = odbiorca_id;
     }
+
+
+    public Package(String status_przesylki, String opcja_dostawy, BigDecimal koszt_do_zaplaty)
+    {
+        this.status_przesylki = status_przesylki;
+        this.opcja_dostawy = opcja_dostawy;
+        this.koszt_do_zaplaty = koszt_do_zaplaty;
+        this.data_nadania = data_nadania;
+        this.na_liscie_rozwozowej = na_liscie_rozwozowej;
+        this.proba_dostarczenia = proba_dostarczenia;
+        this.ostatnia_zmiana_statusu = ostatnia_zmiana_statusu;
+        this.lista_rozwozowa_id = lista_rozwozowa_id;
+        this.nadawca_id = nadawca_id;
+        this.odbiorca_id = odbiorca_id;
+    }
 }

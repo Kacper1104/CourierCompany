@@ -7,9 +7,9 @@
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
 
-
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presenter.Package_New_Edit_Presenter">
    <children>
       <Label text="Dodaj paczkę">
          <font>
@@ -21,22 +21,22 @@
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField promptText="Imię i nazwisko" />
-      <TextField promptText="Ulica i numer domu" />
-      <TextField promptText="Kod pocztowy" />
-      <TextField promptText="Miejscowość" />
+      <TextField fx:id="imie_nazwisko_txt" promptText="Imię i nazwisko" />
+      <TextField fx:id="ulica_txt" promptText="Ulica i numer domu" />
+      <TextField fx:id="kod_txt" promptText="Kod pocztowy" />
+      <TextField fx:id="miejscowosc_txt" promptText="Miejscowość" />
       <Label text="Paczka:">
          <font>
             <Font size="30.0" />
          </font>
       </Label>
-      <TextField promptText="Koszt do zapłaty" />
+      <TextField fx:id="koszt_txt" promptText="Koszt do zapłaty" />
       <Label text="Opcja dostawy">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <ChoiceBox prefHeight="31.0" prefWidth="268.0" />
+      <ComboBox fx:id="combo" prefHeight="31.0" prefWidth="268.0" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
             <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Zatwierdź" />
