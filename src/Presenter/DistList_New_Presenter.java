@@ -114,7 +114,33 @@ public class DistList_New_Presenter {
     @FXML
     private void onOkButtonClicked()
     {
+        if (!saPaczkiNaLiscieRozwozowej())
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Brak paczek na liście rozwozowej!");
+            alert.showAndWait();
+        }
+        else if (! isSelectedCourier())
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Brak wybranego kuriera!");
+            alert.showAndWait();
+        }
+        else
+        {
+            //to do
+            // utworz listę rozwozową i zpaisz zmiany
 
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Utworzono nową listę");
+            alert.showAndWait();
+        }
     }
 
     @FXML
@@ -205,7 +231,31 @@ public class DistList_New_Presenter {
         do_rozwiezienia_listView.setItems(items);
     }
 
+    private Courier getSelectedCourier()
+    {
+        Courier toReturn = null;
 
+
+        String k;
+       k = kurierzy_combo_box.getSelectionModel().getSelectedItem().toString();
+
+        for (Courier c: listaKurierow)
+        {
+            if (c.getImie_i_nazwisko().equals(k))
+                toReturn = c;
+        }
+        return toReturn;
+    }
+
+    private boolean isSelectedCourier()
+    {
+        return !kurierzy_combo_box.getSelectionModel().isEmpty();
+    }
+
+    private boolean saPaczkiNaLiscieRozwozowej()
+    {
+        return paczkiNaLiscieRozwozowej.size() !=0;
+    }
 
 
 

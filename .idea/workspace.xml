@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Package.java" afterPath="$PROJECT_DIR$/src/Model/Package.java" />
       <change beforePath="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" afterPath="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" />
       <change beforePath="$PROJECT_DIR$/src/View/DistList_New.fxml" afterPath="$PROJECT_DIR$/src/View/DistList_New.fxml" />
     </list>
@@ -98,30 +97,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="DistList_New_Presenter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DistList_New_Presenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+            <state relative-caret-position="-168">
+              <caret line="131" column="9" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
               <folding>
                 <element signature="method#onButtonLeftClicked#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#setNaLiscieListview#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#onButtonRightClicked#0;class#DistList_New_Presenter#0" expanded="false" />
-                <element signature="method#onOkButtonClicked#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#onAnulujButtonClicked#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#listOfCourier#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#setKurierzy#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#listOfPackages#0;class#DistList_New_Presenter#0" expanded="false" />
                 <element signature="method#aktualizujPaczkiDoRozwiezienia#0;class#DistList_New_Presenter#0" expanded="false" />
+                <element signature="e#6538#6539#0" expanded="true" />
+                <element signature="e#6610#6611#0" expanded="true" />
+                <element signature="e#6666#6667#0" expanded="true" />
+                <element signature="e#6724#6725#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Package.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Package.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="1239">
               <caret line="61" column="21" lean-forward="false" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
               <folding>
                 <element signature="e#2198#2199#0" expanded="true" />
@@ -612,7 +614,7 @@
       <workItem from="1548008728181" duration="3336000" />
       <workItem from="1548016946203" duration="2367000" />
       <workItem from="1548019350549" duration="2605000" />
-      <workItem from="1548092872074" duration="11302000" />
+      <workItem from="1548092872074" duration="13229000" />
     </task>
     <task id="LOCAL-00001" summary="Structure modification">
       <created>1547486892587</created>
@@ -747,11 +749,18 @@
       <option name="project" value="LOCAL" />
       <updated>1548101419518</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="implementation logic of lists in DistList_New_Presenter">
+      <created>1548105132082</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1548105132082</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51987000" />
+    <option name="totallyTimeSpent" value="53914000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -771,7 +780,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17669173" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2631579" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23952739" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -856,7 +865,8 @@
     <MESSAGE value="implementation presenter DistList_New_Presenter" />
     <MESSAGE value="implementation aler in ID_choice" />
     <MESSAGE value="implementation alert in DistList_New_Presenter" />
-    <option name="LAST_COMMIT_MESSAGE" value="implementation alert in DistList_New_Presenter" />
+    <MESSAGE value="implementation logic of lists in DistList_New_Presenter" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementation logic of lists in DistList_New_Presenter" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1355,14 +1365,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
+    <entry file="file://$PROJECT_DIR$/src/View/DistList_New.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="61" column="21" lean-forward="false" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
-          <folding>
-            <element signature="e#2198#2199#0" expanded="true" />
-            <element signature="e#2226#2227#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="94" column="114" lean-forward="false" selection-start-line="94" selection-start-column="114" selection-end-line="94" selection-end-column="114" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1378,31 +1388,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/DistList_New.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="94" column="114" lean-forward="false" selection-start-line="94" selection-start-column="114" selection-end-line="94" selection-end-column="114" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
+        <state relative-caret-position="-168">
+          <caret line="131" column="9" lean-forward="true" selection-start-line="131" selection-start-column="9" selection-end-line="131" selection-end-column="9" />
           <folding>
             <element signature="method#onButtonLeftClicked#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#setNaLiscieListview#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#onButtonRightClicked#0;class#DistList_New_Presenter#0" expanded="false" />
-            <element signature="method#onOkButtonClicked#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#onAnulujButtonClicked#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#listOfCourier#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#setKurierzy#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#listOfPackages#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#aktualizujPaczkiDoRozwiezienia#0;class#DistList_New_Presenter#0" expanded="false" />
+            <element signature="e#6538#6539#0" expanded="true" />
+            <element signature="e#6610#6611#0" expanded="true" />
+            <element signature="e#6666#6667#0" expanded="true" />
+            <element signature="e#6724#6725#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1239">
+          <caret line="61" column="21" lean-forward="false" selection-start-line="61" selection-start-column="21" selection-end-line="61" selection-end-column="21" />
+          <folding>
+            <element signature="e#2198#2199#0" expanded="true" />
+            <element signature="e#2226#2227#0" expanded="true" />
           </folding>
         </state>
       </provider>
