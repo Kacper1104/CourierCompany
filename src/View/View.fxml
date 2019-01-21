@@ -62,9 +62,9 @@
                   <Font name="Copperplate Gothic Bold" size="33.0" />
                </font>
             </Label>
-            <ImageView fitHeight="274.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="koerta_imageView" fitHeight="274.0" fitWidth="336.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../koperta.png" />
+                  <Image url="@../koperta.png" />
                </image>
             </ImageView>
          </children>

@@ -6,6 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
@@ -52,8 +53,6 @@ public class Package_Return_Presenter {
 
     @FXML
     private void onClickAnulujButton() throws IOException {
-
-        zmienStatusPaczki();
 
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
         Stage stage = (Stage) ok_btn.getScene().getWindow();
@@ -129,9 +128,30 @@ public class Package_Return_Presenter {
         status_po.setText("Zwrot");
     }
 
+    private boolean udaloSieZmienic = true;
+
     private void zmienStatusPaczki()
     {
         // to do
+
+        if(udaloSieZmienic)
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Pomyślnie dokonano zmian");
+            alert.showAndWait();
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Wystąpił błąd, nie udało się dokonać zmian");
+            alert.showAndWait();
+
+        }
+
     }
 
 

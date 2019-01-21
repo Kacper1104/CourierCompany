@@ -7,9 +7,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import javax.swing.text.html.ImageView;
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +25,9 @@ public class View_Presenter extends Application {
 
     @FXML
     Button wprowadz_przesylke_btn, utworz_liste_rozwozowa_btn, nadaj_przesylke_zwrotna_btn;
+
+    @FXML
+    javafx.scene.image.ImageView koerta_imageView;
 
 
     @FXML
@@ -52,6 +58,8 @@ public class View_Presenter extends Application {
         primaryStage.setTitle("Aplikacja kurierska");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+
+
     }
 
 

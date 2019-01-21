@@ -5,6 +5,7 @@ import Model.Package;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
@@ -26,11 +27,18 @@ public class DistList_New_Presenter {
     @FXML
     ComboBox kurierzy_combo_box;
 
+    private boolean saPaczki = false;
+    private boolean saKurierzy = false;
+
+
     @FXML
     public void initialize()
     {
-        setKurierzy(listOfCourier());
-        setPaczkiDoRozwiezienia();
+        //setKurierzy();
+        //setPaczkiDoRozwiezienia();
+
+
+
     }
 
     @FXML
@@ -48,26 +56,49 @@ public class DistList_New_Presenter {
     private List<Courier> listOfCourier()
     {
         // to do
+        //jesli znalazlo, to zmien saKurierzy na true
+
+        if (!saKurierzy)
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Błąd kurierów");
+            alert.setHeaderText(null);
+            alert.setContentText("W tej chwili brak wolnych kurierów!");
+            alert.showAndWait();
+
+            onAnulujButtonClicked();
+        }
 
         return null;
     }
 
-    private void setKurierzy(List<Courier> kurierzy)
+    private void setKurierzy()
     {
-        List<String> toInsert = new ArrayList<>();
+        List<Courier> kurierzy = listOfCourier();
+        ObservableList<String> options = FXCollections.observableArrayList();
         for (Courier c: kurierzy)
         {
-            toInsert.add(c.getLogin() + " " );
+            options.add(c.getLogin() + " " );
         }
 
-        ObservableList<String> options = FXCollections.observableArrayList(toInsert);
         kurierzy_combo_box.setItems(options);
     }
 
     private List<Package> listOfPackages()
     {
+        // jesli są paczki to daj saPaczki na true
         // to do
 
+        if(!saPaczki)
+        {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Brak paczek do rozwiezienia");
+            alert.showAndWait();
+
+            onAnulujButtonClicked();
+        }
         return null;
     }
 
