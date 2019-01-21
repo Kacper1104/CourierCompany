@@ -1,6 +1,7 @@
 package Presenter;
 
 import Model.Package;
+import Model.Recipient;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -34,51 +35,44 @@ public class Package_New_Edit_Presenter {
     public void initialize()
     {
         //trzeba tutaj podać dane z DeliveryCosts
-        //sprawdz czy są paczki i czy są kurierzy
+        //najpierw utworzyć odbiorcę, a następnie go pobrać z bazy i zapisać jego id do paczki i paczkę zapisać w bazie
+
 
         ArrayList<String> test = new ArrayList<>();
         test.add("aaa");
         test.add("Bbb");
         setDataToCombo(test);
 
-
-
-
-
     }
 
-    public void setDataToCombo(List<String> toLoad)
+    private Recipient newRecipient()
+    {
+        String imie_i_nazwisko = imie_nazwisko_txt.getText();
+        String adres = ulica_txt.getText();
+        String kod = kod_txt.getText();
+        String miejscowosc = miejscowosc_txt.getText();
+
+        Recipient toReturn = new Recipient(imie_i_nazwisko, adres, kod, miejscowosc);
+
+        return toReturn;
+    }
+
+
+    private void setDataToCombo(List<String> toLoad)
     {
         ObservableList<String> options = FXCollections.observableArrayList(toLoad);
         combo.setItems(options);
     }
 
-    public Package newPackage()
+    private Package newPackage(int recipient_id)
     {
-        Package toReturn;
-        String imie_i_nazwisko, ulica, kod, miejscowosc, cena;
+        BigDecimal koszt = new BigDecimal(koszt_txt.getText());
 
+       LocalDate now = LocalDate.now();
 
-        String statusPrzesylki = "nadana";
-        String opcja_dostawy = "oplacona";
-        cena = koszt_txt.getText();
-        LocalDate dataNadania = LocalDate.now();
-        boolean na_liscie = false;
-        int probaDostarczenia = 0;
-        //data nadania
-        imie_i_nazwisko = imie_nazwisko_txt.getText();
-        ulica = ulica_txt.getText();
-        kod = kod_txt.getText();
-        miejscowosc = miejscowosc_txt.getText();
+        Package toReturn = new Package("nadana", getSelectedItem(), koszt, now, now, recipient_id);
 
-        //DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-//        String status_przesylki, String opcja_dostawy, BigDecimal koszt_do_zaplaty, LocalDate data_nadania,
-//        boolean na_liscie_rozwozowej, int proba_dostarczenia, LocalDate ostatnia_zmiana_statusu, int nadawca_id, int odbiorca_id)
-//
-
-
-        return null;
+        return toReturn;
     }
 
     private boolean checkFormatOfCode(String code)
@@ -86,11 +80,14 @@ public class Package_New_Edit_Presenter {
         return code.matches("\\d{2}-\\d{3}");
     }
 
-    private boolean checkCena(String cena)
+    private boolean checkFormatOfCena(String cena)
     {
         String decimalPattern = "([0-9]*)\\.([0-9]*)";
         return Pattern.matches(decimalPattern, cena);
     }
-
+    private String getSelectedItem()
+    {
+        return combo.getSelectionModel().getSelectedItem().toString();
+    }
 
 }

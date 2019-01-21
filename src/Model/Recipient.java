@@ -25,6 +25,13 @@ public class Recipient {
         this.haslo = haslo;
     }
 
+    public Recipient(String imie_i_nazwisko, String adres, String kod_pocztowy, String miejscowosc) {
+        this.imie_i_nazwisko = imie_i_nazwisko;
+        this.adres = adres;
+        this.kod_pocztowy = kod_pocztowy;
+        this.miejscowosc = miejscowosc;
+    }
+
     public Recipient() {
 
     }
