@@ -8,12 +8,24 @@ public class Courier {
     private int lista_rozwozowa;
     private String login;
     private String haslo;
+    private String imie_i_nazwisko;
 
-    public Courier(int id, int lista_rozwozowa, String login, String haslo) {
+
+
+    public Courier(int id, int lista_rozwozowa, String login, String haslo, String imie_i_nazwisko) {
         this.id = id;
         this.lista_rozwozowa = lista_rozwozowa;
         this.login = login;
         this.haslo = haslo;
+        this.imie_i_nazwisko = imie_i_nazwisko;
+
+    }
+    public String getImie_i_nazwisko() {
+        return imie_i_nazwisko;
+    }
+
+    public void setImie_i_nazwisko(String imie_i_nazwisko) {
+        this.imie_i_nazwisko = imie_i_nazwisko;
     }
 
     public int getId() {

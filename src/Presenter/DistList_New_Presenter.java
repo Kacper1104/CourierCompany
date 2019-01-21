@@ -78,7 +78,7 @@ public class DistList_New_Presenter {
         ObservableList<String> options = FXCollections.observableArrayList();
         for (Courier c: kurierzy)
         {
-            options.add(c.getLogin() + " " );
+            options.add(c.getImie_i_nazwisko());
         }
 
         kurierzy_combo_box.setItems(options);
@@ -109,7 +109,7 @@ public class DistList_New_Presenter {
 
         for (Package p: paczki)
         {
-            items.add("ID: " + p.getId());
+            items.add("Przesylka numer: " + p.getId());
         }
 
         do_rozwiezienia_listView.setItems(items);
