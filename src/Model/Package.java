@@ -58,6 +58,10 @@ public class Package {
 
     }
 
+    public Package(int id){
+        this.id = id;
+    }
+
     public int getId() {
         return id;
     }

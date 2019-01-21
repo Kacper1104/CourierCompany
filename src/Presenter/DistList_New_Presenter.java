@@ -5,10 +5,7 @@ import Model.Package;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,16 +27,89 @@ public class DistList_New_Presenter {
     private boolean saPaczki = false;
     private boolean saKurierzy = false;
 
+    private List<Package> listaPaczekDoRozwiezienia;
+    private List<Package> paczkiNaLiscieRozwozowej = new ArrayList<>();
+    private List<Courier> listaKurierow;
+
+
 
     @FXML
     public void initialize()
     {
         //setKurierzy();
-        //setPaczkiDoRozwiezienia();
+        setPaczkiDoRozwiezienia();
 
-
+        do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 
     }
+
+    @FXML
+    private void onButtonLeftClicked()
+    {
+        ObservableList<String> choosed = do_rozwiezienia_listView.getSelectionModel().getSelectedItems();
+
+        for (String s: choosed)
+        {
+            int id = Integer.parseInt( s.substring(17,s.length()));
+            Package p = null;
+            boolean znaleziono = false;
+
+            for (int i=0; i< listaPaczekDoRozwiezienia.size() && !znaleziono; i++)
+            {
+                if (listaPaczekDoRozwiezienia.get(i).getId() == id)
+                {
+                    p = listaPaczekDoRozwiezienia.remove(i);
+                    znaleziono = true;
+                }
+            }
+            paczkiNaLiscieRozwozowej.add(p);
+        }
+        setNaLiscieListview();
+        aktualizujPaczkiDoRozwiezienia();
+
+    }
+
+    private void setNaLiscieListview()
+    {
+        ObservableList<String> items = FXCollections.observableArrayList();
+
+        for (Package p: paczkiNaLiscieRozwozowej)
+        {
+            items.add("Przesylka numer: " + p.getId());
+        }
+
+        na_liscie_listView.setItems(items);
+    }
+
+
+    @FXML
+    private void onButtonRightClicked()
+    {
+        ObservableList<String> choosed = na_liscie_listView.getSelectionModel().getSelectedItems();
+
+        for (String s: choosed)
+        {
+            int id = Integer.parseInt( s.substring(17,s.length()));
+            Package p = null;
+            boolean znaleziono = false;
+
+            for (int i=0; i< paczkiNaLiscieRozwozowej.size() && !znaleziono; i++)
+            {
+                if (paczkiNaLiscieRozwozowej.get(i).getId() == id)
+                {
+                    p = paczkiNaLiscieRozwozowej.remove(i);
+                    znaleziono = true;
+                }
+            }
+            listaPaczekDoRozwiezienia.add(p);
+        }
+        setNaLiscieListview();
+        aktualizujPaczkiDoRozwiezienia();
+
+    }
+
+
 
     @FXML
     private void onOkButtonClicked()
@@ -53,9 +123,10 @@ public class DistList_New_Presenter {
 
     }
 
-    private List<Courier> listOfCourier()
+    private void listOfCourier()
     {
         // to do
+        // dodaj do listKurierow
         //jesli znalazlo, to zmien saKurierzy na true
 
         if (!saKurierzy)
@@ -68,15 +139,13 @@ public class DistList_New_Presenter {
 
             onAnulujButtonClicked();
         }
-
-        return null;
     }
 
     private void setKurierzy()
     {
-        List<Courier> kurierzy = listOfCourier();
+        listOfCourier();
         ObservableList<String> options = FXCollections.observableArrayList();
-        for (Courier c: kurierzy)
+        for (Courier c: listaKurierow)
         {
             options.add(c.getImie_i_nazwisko());
         }
@@ -84,10 +153,20 @@ public class DistList_New_Presenter {
         kurierzy_combo_box.setItems(options);
     }
 
-    private List<Package> listOfPackages()
+
+    private void listOfPackages()
     {
         // jesli są paczki to daj saPaczki na true
         // to do
+        //////////////////wersja robocza
+        listaPaczekDoRozwiezienia = new ArrayList<>();
+        for (int i=0; i<5; i++)
+        {
+            listaPaczekDoRozwiezienia.add(new Package(i));
+        }
+
+        saPaczki = true;
+        /////////////////////////////
 
         if(!saPaczki)
         {
@@ -99,21 +178,35 @@ public class DistList_New_Presenter {
 
             onAnulujButtonClicked();
         }
-        return null;
     }
 
     private void setPaczkiDoRozwiezienia()
     {
-        List<Package> paczki = listOfPackages();
+        listOfPackages();
         ObservableList<String> items = FXCollections.observableArrayList();
 
-        for (Package p: paczki)
+        for (Package p: listaPaczekDoRozwiezienia)
         {
             items.add("Przesylka numer: " + p.getId());
         }
 
         do_rozwiezienia_listView.setItems(items);
     }
+
+    private void aktualizujPaczkiDoRozwiezienia()
+    {
+        ObservableList<String> items = FXCollections.observableArrayList();
+
+        for (Package p: listaPaczekDoRozwiezienia)
+        {
+            items.add("Przesylka numer: " + p.getId());
+        }
+
+        do_rozwiezienia_listView.setItems(items);
+    }
+
+
+
 
 
 }
