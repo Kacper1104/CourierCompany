@@ -25,11 +25,20 @@
                   <Font size="30.0" />
                </font>
             </TextField>
-            <Button fx:id="wybierz_btn" mnemonicParsing="false" onMouseClicked="#onClickWybierz" text="Wybierz">
-               <font>
-                  <Font size="25.0" />
-               </font>
-            </Button>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <Button fx:id="wybierz_btn" mnemonicParsing="false" onMouseClicked="#onClickWybierz" text="Wybierz">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="powrot_btn" mnemonicParsing="false" onMouseClicked="#onClickPowrot" text="Powrót">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </center>

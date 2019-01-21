@@ -6,12 +6,11 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Optional;
 
 /**
  * Created by Kacper on 12.01.2019.
@@ -19,7 +18,7 @@ import java.io.IOException;
 public class ReturnOfPackage_Presenter {
 
     @FXML
-    Button wybierz_btn;
+    Button wybierz_btn, powrot_btn;
 
     @FXML
     TextField identyfikator_txt;
@@ -27,7 +26,7 @@ public class ReturnOfPackage_Presenter {
 
 
 
-
+    boolean okId = false;
     static int package_id_to_return;
 
 
@@ -36,7 +35,7 @@ public class ReturnOfPackage_Presenter {
 
         int id = checkId(identyfikator_txt.getText());
 
-        if (existInBase(id))
+        if (existInBase(id) && okId)
         {
             package_id_to_return = id;
 
@@ -48,9 +47,26 @@ public class ReturnOfPackage_Presenter {
         }
         else
         {
-            //okno o niepoprawności
-
+            if (okId)
+                showAlert();
         }
+    }
+
+    @FXML
+    private void onClickPowrot() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
+        Stage stage = (Stage) wybierz_btn.getScene().getWindow();
+        stage.setScene(new Scene(root));
+    }
+
+    private void showAlert()
+    {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Błąd");
+        alert.setHeaderText(null);
+        alert.setContentText("Podany identyfikator nie istnieje w bazie");
+
+        alert.showAndWait();
     }
 
     public int checkId(String id)
@@ -59,11 +75,18 @@ public class ReturnOfPackage_Presenter {
         try
         {
             toReturn = Integer.parseInt(id);
+            okId = true;
             return toReturn;
         }
         catch (Exception e)
         {
-            //pokaż okno o niepoprawności
+            okId = false;
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Błąd");
+            alert.setHeaderText(null);
+            alert.setContentText("Niepoprawny identyfikator");
+
+            alert.showAndWait();
         }
         return -1;
     }
