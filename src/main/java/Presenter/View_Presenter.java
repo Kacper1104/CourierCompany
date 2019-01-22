@@ -54,7 +54,11 @@ public class View_Presenter extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
+        //I'll try it
+        //URL url = new File("View/View.fxml").toURL();
+        //Parent root = FXMLLoader.load(url);
+        //Not working
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("/View/View.fxml"));
         primaryStage.setTitle("Aplikacja kurierska");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

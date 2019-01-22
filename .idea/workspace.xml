@@ -2,115 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffbb3b6a-b82a-4ead-9d41-bbc3138ea2ec" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Advice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/DataBase/DataBase" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Awizo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/AwizoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/AwizoResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Kurier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/KurierRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/KurierResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowa.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowaResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Magazynier.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/MagazynierRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/MagazynierResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Nadawca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/NadawcaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/NadawcaResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Odbiorca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/OdbiorcaRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/OdbiorcaResource.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/ServerApplication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/test/java/server/ServerApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-aop-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-aspects-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-context-support-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-core-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-expression-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-instrument-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-jdbc-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-jms-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-messaging-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-orm-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-oxm-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-test-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/spring-tx-4.3.18.RELEASE.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/DataBase/DataBase" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Advice.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Courier.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/DeliveryCosts.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/DistList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Package.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Recipient.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Sender.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Status.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/WarehouseKeeper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/DistList_New_Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/Package_New_Edit_Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/Package_Return_Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/ReturnOfPackage_Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/View_Presenter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/DistList_New.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/Package_NewEdit.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/ReturnOfPackage/ID_Choice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/ID_Choice.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/ReturnOfPackage/Package_Return.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/Package_Return.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/View.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/arrow_po_zwrocie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/arrow_po_zwrocie.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/koperta.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/koperta.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/DistList_NewEdit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/DistList_Overview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/Package_NewEdit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/Package_Overview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/Program_Overview.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/View.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/sample/Controller.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/sample/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/sample/sample.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Advice.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Courier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/DeliveryCosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DeliveryCosts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/DistList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DistList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Package.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Recipient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Status.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Model/WarehouseKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WarehouseKeeper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/Package_New_Edit_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/Package_Return_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/ReturnOfPackage_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/ReturnOfPackage_Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/View_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/DistList_New.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/DistList_New.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/Package_NewEdit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Package_NewEdit.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/ReturnOfPackage/Package_Return.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/View/View.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arrow_po_zwrocie.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/koperta.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -121,37 +13,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Model/WarehouseKeeper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="47" />
-              <folding>
-                <element signature="e#611#612#0" expanded="true" />
-                <element signature="e#636#637#0" expanded="true" />
-                <element signature="e#673#674#0" expanded="true" />
-                <element signature="e#701#702#0" expanded="true" />
-                <element signature="e#733#734#0" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#803#804#0" expanded="true" />
-                <element signature="e#837#838#0" expanded="true" />
-                <element signature="e#869#870#0" expanded="true" />
-                <element signature="e#897#898#0" expanded="true" />
-                <element signature="e#939#940#0" expanded="true" />
-                <element signature="e#973#974#0" expanded="true" />
-                <element signature="e#1023#1024#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1131#1132#0" expanded="true" />
-                <element signature="e#1185#1186#0" expanded="true" />
-                <element signature="e#1227#1228#0" expanded="true" />
-                <element signature="e#1265#1266#0" expanded="true" />
-                <element signature="e#1327#1328#0" expanded="true" />
-                <element signature="e#1381#1382#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/DistList.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -249,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="290">
-              <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+              <caret line="168" selection-start-line="168" selection-end-line="168" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -297,6 +158,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="474">
+              <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Model/Sender.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -329,6 +199,11 @@
       </file>
     </leaf>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>rest</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -345,6 +220,7 @@
         <option value="$PROJECT_DIR$/src/main/java/Model/Package.java" />
         <option value="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" />
       </list>
     </option>
   </component>
@@ -356,7 +232,7 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1912" />
+    <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1056" />
@@ -442,8 +318,8 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548148821564" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548151886153" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../CourierCompany" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -503,18 +379,17 @@
       <option name="presentableId" value="Default" />
       <updated>1548117581748</updated>
       <workItem from="1548117583146" duration="676000" />
-      <workItem from="1548145588112" duration="3231000" />
+      <workItem from="1548145588112" duration="3789000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3907000" />
+    <option name="totallyTimeSpent" value="4465000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -525,8 +400,8 @@
       <window_info anchor="bottom" id="REST Client" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32928178" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -534,7 +409,7 @@
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32827735" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" />
@@ -553,17 +428,28 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java</url>
+          <line>61</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Model/Advice.java" />
     <entry file="file://$PROJECT_DIR$/../Server/src/main/java/server/PrzesylkaResource.java" />
     <entry file="file://$PROJECT_DIR$/../Server/src/main/java/server/Przesylka.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Advice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -793,10 +679,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="290">
-          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+          <caret line="168" selection-start-line="168" selection-end-line="168" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="56" column="9" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
         </state>
       </provider>
     </entry>
