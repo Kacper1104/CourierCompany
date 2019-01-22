@@ -1,6 +1,7 @@
 package Presenter;
 
 import Model.Courier;
+import Model.DistList;
 import Model.Package;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +18,9 @@ import java.io.PrintStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.Normalizer;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -41,17 +44,43 @@ public class DistList_New_Presenter {
     private List<Package> paczkiNaLiscieRozwozowej = new ArrayList<>();
     private List<Courier> listaKurierow;
 
+    private DistList listaRozwozowa;
 
+    private Courier wybranyKurier;
 
     @FXML
     public void initialize()
     {
-        //setKurierzy();
+        setKurierzy();
         setPaczkiDoRozwiezienia();
 
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
+
+	private void utworzListeRozwozowa()
+    {
+        wybranyKurier = getSelectedCourier();
+        LocalDate date = LocalDate.now();
+        Date dd = new Date(date.getYear(), date.getMonthValue(), date.getDayOfMonth());
+
+        listaRozwozowa = new DistList(dd,null, wybranyKurier, paczkiNaLiscieRozwozowej);
+    }
+
+    private void ustawPaczkaListeRozwozowa()
+    {
+        for (Package p: paczkiNaLiscieRozwozowej)
+        {
+            p.setLista_rozwozowa_id(listaRozwozowa);
+            p.setNa_liscie_rozwozowej(true);
+        }
+    }
+
+    private void przypiszKurierowiListe()
+    {
+        getSelectedCourier().setLista_rozwozowa(listaRozwozowa);
+    }
+
 
     @FXML
     private void onButtonLeftClicked()
@@ -141,8 +170,17 @@ public class DistList_New_Presenter {
         }
         else
         {
-            //to do
-            // utworz listę rozwozową i zpaisz zmiany
+
+            utworzListeRozwozowa();
+            ustawPaczkaListeRozwozowa();
+            przypiszKurierowiListe();
+
+            //
+            //wysłać postem wybrany kurier, liste rozwozowa, paczki do zmiany
+            //
+
+
+
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(null);
@@ -160,10 +198,6 @@ public class DistList_New_Presenter {
 
     private void listOfCourier()
     {
-        // to do
-        // dodaj do listKurierow
-        //jesli znalazlo, to zmien saKurierzy na true
-        //Start REST
         listaKurierow=CourierREST_GET();
         for(Courier iterator: listaKurierow){
             if(iterator.getLista_rozwozowa() != null){
@@ -172,7 +206,6 @@ public class DistList_New_Presenter {
         }
         if(listaKurierow.isEmpty())
             saKurierzy = false;
-        //na liscie kurierzy z resta
 
 
         if (!saKurierzy)
@@ -203,7 +236,6 @@ public class DistList_New_Presenter {
     private void listOfPackages()
     {
 
-        //przesylki bez listy rozwozowej
         listaPaczekDoRozwiezienia = PackageREST_GET();
         for(Package iterator: listaPaczekDoRozwiezienia){
             if(iterator.getLista_rozwozowa_id() != null){
