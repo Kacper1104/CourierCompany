@@ -1,7 +1,8 @@
 package Presenter;
 
-import Model.Recipient;
-import Model.Sender;
+import Model.Nadawca;
+import Model.Odbiorca;
+import Model.Przesylka;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -16,9 +17,9 @@ import java.io.IOException;
 public class Package_Return_Presenter {
 
 
-    private Sender nadawca;
-    private Recipient odbiorca;
-    private Package paczka;
+    private Nadawca nadawca;
+    private Odbiorca odbiorca;
+    private Przesylka paczka;
     private int id;
 
     @FXML
@@ -61,19 +62,19 @@ public class Package_Return_Presenter {
 
 
 
-    private Sender findSender(int id)
+    private Nadawca findSender(int id)
     {
         //to do
-        return new Sender();
+        return new Nadawca();
     }
 
-    private Recipient findRecpient(int id)
+    private Odbiorca findRecpient(int id)
     {
         //to do
-        return new Recipient();
+        return new Odbiorca();
     }
 
-    private Package findPackage(int id)
+    private Przesylka findPackage(int id)
     {
 
         // to do
@@ -91,33 +92,33 @@ public class Package_Return_Presenter {
 
     private void setOdbiorcaPrzed()
     {
-        imie_i_naz_od_przed.setText(odbiorca.getImie_i_nazwisko());
+        imie_i_naz_od_przed.setText(odbiorca.getImie_I_Nazwisko());
         ulica_od_przed.setText(odbiorca.getAdres());
-        kod_odb_przed.setText(odbiorca.getKod_pocztowy());
+        kod_odb_przed.setText(odbiorca.getKod_Pocztowy());
         miejscowosc_od_przed.setText(odbiorca.getMiejscowosc());
     }
 
     private void setNadawcaPrzed()
     {
-        imie_i_naz_nad_przed.setText(nadawca.getImie_i_nazwisko());
+        imie_i_naz_nad_przed.setText(nadawca.getImie_I_Nazwisko());
         ulica_nad_przed.setText(nadawca.getAdres());
-        kod_nad_przed.setText(nadawca.getKod_pocztowy());
+        kod_nad_przed.setText(nadawca.getKod_Pocztowy());
         miejscowosc_nad_przed.setText(nadawca.getMiejscowosc());
     }
 
     private void setOdbiorcaPo()
     {
-        imie_i_naz_od_po.setText(nadawca.getImie_i_nazwisko());
+        imie_i_naz_od_po.setText(nadawca.getImie_I_Nazwisko());
         ulica_od_po.setText(nadawca.getAdres());
-        kod_odb_po.setText(nadawca.getKod_pocztowy());
+        kod_odb_po.setText(nadawca.getKod_Pocztowy());
         miejscowosc_od_po.setText(nadawca.getMiejscowosc());
     }
 
     private void setNadawcaPo()
     {
-        imie_i_naz_od_po.setText(odbiorca.getImie_i_nazwisko());
+        imie_i_naz_od_po.setText(odbiorca.getImie_I_Nazwisko());
         ulica_od_po.setText(odbiorca.getAdres());
-        kod_odb_po.setText(odbiorca.getKod_pocztowy());
+        kod_odb_po.setText(odbiorca.getKod_Pocztowy());
         miejscowosc_od_po.setText(odbiorca.getMiejscowosc());
     }
 

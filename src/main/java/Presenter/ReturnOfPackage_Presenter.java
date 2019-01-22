@@ -1,7 +1,5 @@
 package Presenter;
 
-import Model.Recipient;
-import Model.Sender;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,7 +8,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.Optional;
 
 /**
  * Created by Kacper on 12.01.2019.

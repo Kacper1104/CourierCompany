@@ -1,23 +1,14 @@
 package Presenter;
 
-import Model.Courier;
-import Model.DistList;
-import Model.Package;
+import Model.Kurier;
+import Model.Lista_rozwozowa;
+import Model.Przesylka;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import org.springframework.web.client.RestTemplate;
 
-import javax.net.ssl.HostnameVerifier;
-import javax.net.ssl.HttpsURLConnection;
-import javax.net.ssl.SSLSession;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.io.PrintStream;
-import java.net.URL;
-import java.net.URLConnection;
-import java.text.Normalizer;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -40,13 +31,13 @@ public class DistList_New_Presenter {
     private boolean saPaczki = false;
     private boolean saKurierzy = false;
 
-    private List<Package> listaPaczekDoRozwiezienia;
-    private List<Package> paczkiNaLiscieRozwozowej = new ArrayList<>();
-    private List<Courier> listaKurierow;
+    private List<Przesylka> listaPaczekDoRozwiezienia;
+    private List<Przesylka> paczkiNaLiscieRozwozowej = new ArrayList<>();
+    private List<Kurier> listaKurierow;
 
-    private DistList listaRozwozowa;
+    private Lista_rozwozowa listaRozwozowa;
 
-    private Courier wybranyKurier;
+    private Kurier wybranyKurier;
 
     @FXML
     public void initialize()
@@ -64,21 +55,21 @@ public class DistList_New_Presenter {
         LocalDate date = LocalDate.now();
         Date dd = new Date(date.getYear(), date.getMonthValue(), date.getDayOfMonth());
 
-        listaRozwozowa = new DistList(dd,null, wybranyKurier, paczkiNaLiscieRozwozowej);
+        listaRozwozowa = new Lista_rozwozowa(dd,null, wybranyKurier, paczkiNaLiscieRozwozowej);
     }
 
     private void ustawPaczkaListeRozwozowa()
     {
-        for (Package p: paczkiNaLiscieRozwozowej)
+        for (Przesylka p: paczkiNaLiscieRozwozowej)
         {
-            p.setLista_rozwozowa_id(listaRozwozowa);
+            p.setLista_rozwozowa_ID(listaRozwozowa);
             p.setNa_liscie_rozwozowej(true);
         }
     }
 
     private void przypiszKurierowiListe()
     {
-        getSelectedCourier().setLista_rozwozowa(listaRozwozowa);
+        getSelectedCourier().setLista_rozwozowa_ID(listaRozwozowa);
     }
 
 
@@ -90,12 +81,12 @@ public class DistList_New_Presenter {
         for (String s: choosed)
         {
             int id = Integer.parseInt( s.substring(17,s.length()));
-            Package p = null;
+            Przesylka p = null;
             boolean znaleziono = false;
 
             for (int i=0; i< listaPaczekDoRozwiezienia.size() && !znaleziono; i++)
             {
-                if (listaPaczekDoRozwiezienia.get(i).getId() == id)
+                if (listaPaczekDoRozwiezienia.get(i).getID() == id)
                 {
                     p = listaPaczekDoRozwiezienia.remove(i);
                     znaleziono = true;
@@ -112,9 +103,9 @@ public class DistList_New_Presenter {
     {
         ObservableList<String> items = FXCollections.observableArrayList();
 
-        for (Package p: paczkiNaLiscieRozwozowej)
+        for (Przesylka p: paczkiNaLiscieRozwozowej)
         {
-            items.add("Przesylka numer: " + p.getId());
+            items.add("Przesylka numer: " + p.getID());
         }
 
         na_liscie_listView.setItems(items);
@@ -129,12 +120,12 @@ public class DistList_New_Presenter {
         for (String s: choosed)
         {
             int id = Integer.parseInt( s.substring(17,s.length()));
-            Package p = null;
+            Przesylka p = null;
             boolean znaleziono = false;
 
             for (int i=0; i< paczkiNaLiscieRozwozowej.size() && !znaleziono; i++)
             {
-                if (paczkiNaLiscieRozwozowej.get(i).getId() == id)
+                if (paczkiNaLiscieRozwozowej.get(i).getID() == id)
                 {
                     p = paczkiNaLiscieRozwozowej.remove(i);
                     znaleziono = true;
@@ -199,8 +190,8 @@ public class DistList_New_Presenter {
     private void listOfCourier()
     {
         listaKurierow=CourierREST_GET();
-        for(Courier iterator: listaKurierow){
-            if(iterator.getLista_rozwozowa() != null){
+        for(Kurier iterator: listaKurierow){
+            if(iterator.getLista_rozwozowa_ID() != null){
                 listaKurierow.remove(iterator);
             }
         }
@@ -224,9 +215,9 @@ public class DistList_New_Presenter {
     {
         listOfCourier();
         ObservableList<String> options = FXCollections.observableArrayList();
-        for (Courier c: listaKurierow)
+        for (Kurier c: listaKurierow)
         {
-            options.add(c.getImie_i_nazwisko());
+            options.add(c.getImie_I_Nazwisko());
         }
 
         kurierzy_combo_box.setItems(options);
@@ -237,8 +228,8 @@ public class DistList_New_Presenter {
     {
 
         listaPaczekDoRozwiezienia = PackageREST_GET();
-        for(Package iterator: listaPaczekDoRozwiezienia){
-            if(iterator.getLista_rozwozowa_id() != null){
+        for(Przesylka iterator: listaPaczekDoRozwiezienia){
+            if(iterator.getLista_rozwozowa_ID() != null){
                 listaPaczekDoRozwiezienia.remove(iterator);
             }
         }
@@ -263,9 +254,9 @@ public class DistList_New_Presenter {
         listOfPackages();
         ObservableList<String> items = FXCollections.observableArrayList();
 
-        for (Package p: listaPaczekDoRozwiezienia)
+        for (Przesylka p: listaPaczekDoRozwiezienia)
         {
-            items.add("Przesylka numer: " + p.getId());
+            items.add("Przesylka numer: " + p.getID());
         }
 
         do_rozwiezienia_listView.setItems(items);
@@ -275,36 +266,36 @@ public class DistList_New_Presenter {
     {
         ObservableList<String> items = FXCollections.observableArrayList();
 
-        for (Package p: listaPaczekDoRozwiezienia)
+        for (Przesylka p: listaPaczekDoRozwiezienia)
         {
-            items.add("Przesylka numer: " + p.getId());
+            items.add("Przesylka numer: " + p.getID());
         }
 
         do_rozwiezienia_listView.setItems(items);
     }
 
-    private List<Courier> CourierREST_GET(){
+    private List<Kurier> CourierREST_GET(){
         RestTemplate restTemplate = new RestTemplate();
-        List<Courier> couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", List.class);
+        List<Kurier> couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", List.class);
         return couriers;
     }
-    private List<Package> PackageREST_GET(){
+    private List<Przesylka> PackageREST_GET(){
         RestTemplate restTemplate = new RestTemplate();
-        List<Package> packages = restTemplate.getForObject("http://localhost:8080/rest/paczka", List.class);
+        List<Przesylka> packages = restTemplate.getForObject("http://localhost:8080/rest/paczka", List.class);
         return packages;
     }
 
-    private Courier getSelectedCourier()
+    private Kurier getSelectedCourier()
     {
-        Courier toReturn = null;
+        Kurier toReturn = null;
 
 
         String k;
         k = kurierzy_combo_box.getSelectionModel().getSelectedItem().toString();
 
-        for (Courier c: listaKurierow)
+        for (Kurier c: listaKurierow)
         {
-            if (c.getImie_i_nazwisko().equals(k))
+            if (c.getImie_I_Nazwisko().equals(k))
                 toReturn = c;
         }
         return toReturn;

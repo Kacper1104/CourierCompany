@@ -1,18 +1,14 @@
 package Presenter;
 
-import Model.Package;
-import Model.Recipient;
+import Model.Odbiorca;
+import Model.Przesylka;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -45,14 +41,14 @@ public class Package_New_Edit_Presenter {
 
     }
 
-    private Recipient newRecipient()
+    private Odbiorca newRecipient()
     {
         String imie_i_nazwisko = imie_nazwisko_txt.getText();
         String adres = ulica_txt.getText();
         String kod = kod_txt.getText();
         String miejscowosc = miejscowosc_txt.getText();
 
-        Recipient toReturn = new Recipient(imie_i_nazwisko, adres, kod, miejscowosc);
+        Odbiorca toReturn = new Odbiorca(imie_i_nazwisko, adres, kod, miejscowosc);
 
         return toReturn;
     }
@@ -64,14 +60,14 @@ public class Package_New_Edit_Presenter {
         combo.setItems(options);
     }
 
-    private Package newPackage(Recipient recipient_id)
+    private Przesylka newPackage(Odbiorca recipient_id)
     {
         double koszt = Double.parseDouble(koszt_txt.getText());
 
        LocalDate now_lc = LocalDate.now();
        Date now = new Date(now_lc.getYear(), now_lc.getMonth().getValue(), now_lc.getDayOfMonth());
 
-        Package toReturn = new Package("nadana", getSelectedItem(), koszt, now, now, recipient_id);
+        Przesylka toReturn = new Przesylka("nadana", getSelectedItem(), koszt, now, now, recipient_id);
 
         return toReturn;
     }
