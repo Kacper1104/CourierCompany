@@ -1,6 +1,7 @@
 package Presenter;
 
 import Model.Courier;
+import Model.DistList;
 import Model.Package;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -17,7 +18,9 @@ import java.io.PrintStream;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.Normalizer;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -41,17 +44,43 @@ public class DistList_New_Presenter {
     private List<Package> paczkiNaLiscieRozwozowej = new ArrayList<>();
     private List<Courier> listaKurierow;
 
+    private DistList listaRozwozowa;
 
+    private Courier wybranyKurier;
 
     @FXML
     public void initialize()
     {
-        //setKurierzy();
+        setKurierzy();
         setPaczkiDoRozwiezienia();
 
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
+
+	private void utworzListeRozwozowa()
+    {
+        wybranyKurier = getSelectedCourier();
+        LocalDate date = LocalDate.now();
+        Date dd = new Date(date.getYear(), date.getMonthValue(), date.getDayOfMonth());
+
+        listaRozwozowa = new DistList(dd,null, wybranyKurier, paczkiNaLiscieRozwozowej);
+    }
+
+    private void ustawPaczkaListeRozwozowa()
+    {
+        for (Package p: paczkiNaLiscieRozwozowej)
+        {
+            p.setLista_rozwozowa_id(listaRozwozowa);
+            p.setNa_liscie_rozwozowej(true);
+        }
+    }
+
+    private void przypiszKurierowiListe()
+    {
+        getSelectedCourier().setLista_rozwozowa(listaRozwozowa);
+    }
+
 
     @FXML
     private void onButtonLeftClicked()
@@ -141,8 +170,17 @@ public class DistList_New_Presenter {
         }
         else
         {
-            //to do
-            // utworz listę rozwozową i zpaisz zmiany
+
+            utworzListeRozwozowa();
+            ustawPaczkaListeRozwozowa();
+            przypiszKurierowiListe();
+
+            //
+            //wysłać postem wybrany kurier, liste rozwozowa, paczki do zmiany
+            //
+
+
+
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle(null);
@@ -160,15 +198,14 @@ public class DistList_New_Presenter {
 
     private void listOfCourier()
     {
-        // to do
-        // dodaj do listKurierow
-        //jesli znalazlo, to zmien saKurierzy na true
-        //Start REST
         listaKurierow=CourierREST_GET();
-        //na liscie kurierzy z resta
-
-
-
+        for(Courier iterator: listaKurierow){
+            if(iterator.getLista_rozwozowa() != null){
+                listaKurierow.remove(iterator);
+            }
+        }
+        if(listaKurierow.isEmpty())
+            saKurierzy = false;
 
 
         if (!saKurierzy)
@@ -198,18 +235,16 @@ public class DistList_New_Presenter {
 
     private void listOfPackages()
     {
-        // jesli są paczki to daj saPaczki na true
-        // to do
-        //////////////////wersja robocza
-        listaPaczekDoRozwiezienia = new ArrayList<>();
-        for (int i=0; i<5; i++)
-        {
-            //NIE DO KONCA CZAJE CO MA ROBIC TA LINIJKA
-            //listaPaczekDoRozwiezienia.add(new Package(i));
-        }
 
-        saPaczki = true;
-        /////////////////////////////
+        listaPaczekDoRozwiezienia = PackageREST_GET();
+        for(Package iterator: listaPaczekDoRozwiezienia){
+            if(iterator.getLista_rozwozowa_id() != null){
+                listaPaczekDoRozwiezienia.remove(iterator);
+            }
+        }
+        if(listaPaczekDoRozwiezienia.isEmpty())
+            saPaczki = false;
+
 
         if(!saPaczki)
         {
@@ -252,6 +287,11 @@ public class DistList_New_Presenter {
         RestTemplate restTemplate = new RestTemplate();
         List<Courier> couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", List.class);
         return couriers;
+    }
+    private List<Package> PackageREST_GET(){
+        RestTemplate restTemplate = new RestTemplate();
+        List<Package> packages = restTemplate.getForObject("http://localhost:8080/rest/paczka", List.class);
+        return packages;
     }
 
     private Courier getSelectedCourier()

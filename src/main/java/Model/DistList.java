@@ -22,6 +22,12 @@ public class DistList {
         this.courier=courier;
         this.przesylki = przesylki;
     }
+    public DistList(Date data, WarehouseKeeper magazynier_id, Courier courier, List<Package>przesylki) {
+        this.data = data;
+        this.magazynier_id = magazynier_id;
+        this.courier=courier;
+        this.przesylki = przesylki;
+    }
 
 
 
