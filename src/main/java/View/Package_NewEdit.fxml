@@ -39,9 +39,9 @@
       <ComboBox fx:id="combo" prefHeight="31.0" prefWidth="268.0" />
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Zatwierdź" />
+            <Button mnemonicParsing="false" onMouseClicked="#onOkButtonClicked" prefHeight="50.0" prefWidth="200.0" text="Zatwierdź" />
             <Pane prefHeight="100.0" prefWidth="698.0" />
-            <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" text="Anuluj" />
+            <Button mnemonicParsing="false" onMouseClicked="#onAnulujButtonClicked" prefHeight="50.0" prefWidth="200.0" text="Anuluj" />
          </children>
       </HBox>
    </children>

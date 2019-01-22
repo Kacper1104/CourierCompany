@@ -6,9 +6,14 @@ import Model.Przesylka;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.stage.Stage;
 import org.springframework.web.client.RestTemplate;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -42,8 +47,8 @@ public class DistList_New_Presenter {
     @FXML
     public void initialize()
     {
-        setKurierzy();
-        setPaczkiDoRozwiezienia();
+        //setKurierzy();
+        //setPaczkiDoRozwiezienia();
 
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -141,8 +146,7 @@ public class DistList_New_Presenter {
 
 
     @FXML
-    private void onOkButtonClicked()
-    {
+    private void onOkButtonClicked() throws IOException {
         if (!saPaczkiNaLiscieRozwozowej())
         {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -178,17 +182,21 @@ public class DistList_New_Presenter {
             alert.setHeaderText(null);
             alert.setContentText("Utworzono nową listę");
             alert.showAndWait();
+
+            Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
+            Stage stage = (Stage) ok_btn.getScene().getWindow();
+            stage.setScene(new Scene(root));
         }
     }
 
     @FXML
-    private void onAnulujButtonClicked()
-    {
-
+    private void onAnulujButtonClicked() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
+        Stage stage = (Stage) ok_btn.getScene().getWindow();
+        stage.setScene(new Scene(root));
     }
 
-    private void listOfCourier()
-    {
+    private void listOfCourier() throws IOException {
         listaKurierow=CourierREST_GET();
         for(Kurier iterator: listaKurierow){
             if(iterator.getLista_rozwozowa_ID() != null){
@@ -211,8 +219,7 @@ public class DistList_New_Presenter {
         }
     }
 
-    private void setKurierzy()
-    {
+    private void setKurierzy() throws IOException {
         listOfCourier();
         ObservableList<String> options = FXCollections.observableArrayList();
         for (Kurier c: listaKurierow)
@@ -224,8 +231,7 @@ public class DistList_New_Presenter {
     }
 
 
-    private void listOfPackages()
-    {
+    private void listOfPackages() throws IOException {
 
         listaPaczekDoRozwiezienia = PackageREST_GET();
         for(Przesylka iterator: listaPaczekDoRozwiezienia){
@@ -249,8 +255,8 @@ public class DistList_New_Presenter {
         }
     }
 
-    private void setPaczkiDoRozwiezienia()
-    {
+    private void setPaczkiDoRozwiezienia() throws IOException {
+
         listOfPackages();
         ObservableList<String> items = FXCollections.observableArrayList();
 

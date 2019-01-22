@@ -5,9 +5,15 @@ import Model.Przesylka;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -35,8 +41,8 @@ public class Package_New_Edit_Presenter {
 
 
         ArrayList<String> test = new ArrayList<>();
-        test.add("aaa");
-        test.add("Bbb");
+        test.add("Opłacona");
+        test.add("Za pobraniem");
         setDataToCombo(test);
 
     }
@@ -86,5 +92,67 @@ public class Package_New_Edit_Presenter {
     {
         return combo.getSelectionModel().getSelectedItem().toString();
     }
+
+    @FXML
+    private void onOkButtonClicked() throws IOException {
+        //if wszystkie pola są wypełnione
+        if (!(imie_nazwisko_txt.getText().trim().isEmpty() || ulica_txt.getText().trim().isEmpty() ||
+                kod_txt.getText().trim().isEmpty() || miejscowosc_txt.getText().trim().isEmpty() || koszt_txt.getText().trim().isEmpty() || combo.getSelectionModel().isEmpty()))
+        {
+            if (! checkFormatOfCode(kod_txt.getText()))
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle(null);
+                alert.setHeaderText(null);
+                alert.setContentText("Zły format kodu");
+                alert.showAndWait();
+            }
+            else if (! checkFormatOfCena(koszt_txt.getText()))
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle(null);
+                alert.setHeaderText(null);
+                alert.setContentText("Zły format kwoty pieniędzy");
+                alert.showAndWait();
+            }
+            else
+            {
+                //stworzono nową paczkę
+                newPackage(newRecipient());
+                //to do
+                //dodaj do bazy
+
+                Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                alert.setTitle(null);
+                alert.setHeaderText(null);
+                alert.setContentText("Dodano nową paczkę");
+                alert.showAndWait();
+
+                Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
+                Stage stage = (Stage) combo.getScene().getWindow();
+                stage.setScene(new Scene(root));
+
+
+            }
+        }
+        else
+        {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(null);
+            alert.setHeaderText(null);
+            alert.setContentText("Niektóre wymagane pola są puste!");
+            alert.showAndWait();
+        }
+
+
+    }
+
+    @FXML
+    private void onAnulujButtonClicked() throws IOException {
+        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
+        Stage stage = (Stage) combo.getScene().getWindow();
+        stage.setScene(new Scene(root));
+    }
+
 
 }

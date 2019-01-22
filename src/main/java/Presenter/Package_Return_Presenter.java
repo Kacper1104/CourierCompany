@@ -124,7 +124,7 @@ public class Package_Return_Presenter {
 
     private void setStatusy()
     {
-        //do odkomentowania po implemetacji pozostałych metod
+        //do odkomentowania po implementacji
         //status_przed.setText(paczka.getStatus_przesylki());
         status_po.setText("Zwrot");
     }
