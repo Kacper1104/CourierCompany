@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="955863df-15e2-49e2-8929-a26a7b40d9c7" name="Default Changelist" comment="">
+    <list default="true" id="955863df-15e2-49e2-8929-a26a7b40d9c7" name="Default Changelist" comment="added service buttons">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CourierCompany.iml" afterPath="$PROJECT_DIR$/CourierCompany.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" afterPath="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/View/Package_NewEdit.fxml" afterPath="$PROJECT_DIR$/src/main/java/View/Package_NewEdit.fxml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Presenter/Package_New_Edit_Presenter.class" afterPath="$PROJECT_DIR$/target/classes/Presenter/Package_New_Edit_Presenter.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" afterPath="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/Package_Return.fxml" afterPath="$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/Package_Return.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View/View.fxml" afterPath="$PROJECT_DIR$/src/main/java/View/View.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/arrow_po_zwrocie.png" afterPath="$PROJECT_DIR$/arrow_po_zwrocie.png" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/koperta.png" afterPath="$PROJECT_DIR$/koperta.png" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Presenter/DistList_New_Presenter.class" afterPath="$PROJECT_DIR$/target/classes/Presenter/DistList_New_Presenter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Presenter/View_Presenter.class" afterPath="$PROJECT_DIR$/target/classes/Presenter/View_Presenter.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/View/Package_NewEdit.fxml" afterPath="$PROJECT_DIR$/target/classes/View/Package_NewEdit.fxml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/View/ReturnOfPackage/Package_Return.fxml" afterPath="$PROJECT_DIR$/target/classes/View/ReturnOfPackage/Package_Return.fxml" />
+      <change beforePath="$PROJECT_DIR$/target/classes/View/View.fxml" afterPath="$PROJECT_DIR$/target/classes/View/View.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,10 +24,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Package_Return_Presenter.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Package_Return_Presenter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1024">
+            <state relative-caret-position="1428">
               <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="19" />
               <folding />
             </state>
@@ -40,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DistList_New_Presenter.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DistList_New_Presenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2187">
-              <caret line="258" column="8" lean-forward="false" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+            <state relative-caret-position="1494">
+              <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2013#2014#0" expanded="true" />
@@ -56,11 +60,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="View.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/View/View.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="313">
+              <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="View_Presenter.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="50" column="40" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="50" selection-end-column="40" />
+            <state relative-caret-position="420">
+              <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="95" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -89,7 +106,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.idea/workspace.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Kurier.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Awizo.java" />
         <option value="$PROJECT_DIR$/src/main/java/Model/Magazynier.java" />
@@ -100,6 +116,8 @@
         <option value="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java" />
         <option value="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/View/View.fxml" />
+        <option value="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" />
       </list>
     </option>
   </component>
@@ -168,22 +186,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="Presenter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -213,8 +215,18 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany\src" />
+      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Model" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany" />
+      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany\src" />
+      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany\src\main\java\View" />
+      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -270,16 +282,23 @@
       <updated>1548159258593</updated>
       <workItem from="1548159260708" duration="866000" />
       <workItem from="1548181109285" duration="1198000" />
-      <workItem from="1548182766512" duration="2838000" />
+      <workItem from="1548182766512" duration="5470000" />
     </task>
+    <task id="LOCAL-00001" summary="added service buttons">
+      <created>1548185632591</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1548185632591</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4902000" />
+    <option name="totallyTimeSpent" value="7534000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -295,20 +314,20 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18796992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18796992" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990878" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -317,6 +336,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added service buttons" />
+    <option name="LAST_COMMIT_MESSAGE" value="added service buttons" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -632,28 +655,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1024">
-          <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="50" column="40" lean-forward="true" selection-start-line="48" selection-start-column="8" selection-end-line="50" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2187">
-          <caret line="258" column="8" lean-forward="false" selection-start-line="258" selection-start-column="8" selection-end-line="258" selection-end-column="8" />
+        <state relative-caret-position="1494">
+          <caret line="258" column="0" lean-forward="false" selection-start-line="258" selection-start-column="0" selection-end-line="258" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2013#2014#0" expanded="true" />
@@ -661,6 +666,35 @@
             <element signature="method#onButtonRightClicked#0;class#DistList_New_Presenter#0" expanded="false" />
             <element signature="method#aktualizujPaczkiDoRozwiezienia#0;class#DistList_New_Presenter#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/View.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="313">
+          <caret line="65" column="22" lean-forward="true" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="64" column="18" lean-forward="true" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="95" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="80" column="19" lean-forward="false" selection-start-line="80" selection-start-column="15" selection-end-line="80" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
