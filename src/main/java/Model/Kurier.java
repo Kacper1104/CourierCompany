@@ -1,6 +1,8 @@
 package Model;
 
-public class Kurier {
+import java.io.Serializable;
+
+public class Kurier implements Serializable {
     private Integer ID;
     private Lista_rozwozowa Lista_rozwozowa_ID;
     private String Login;

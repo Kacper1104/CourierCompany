@@ -1,6 +1,7 @@
 package Presenter;
 
 import Model.Kurier;
+import Model.ListaPaczek;
 import Model.Lista_rozwozowa;
 import Model.Przesylka;
 import javafx.collections.FXCollections;
@@ -11,9 +12,15 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.web.client.RestTemplate;
+import sun.misc.IOUtils;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.Charset;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
@@ -45,10 +52,9 @@ public class DistList_New_Presenter {
     private Kurier wybranyKurier;
 
     @FXML
-    public void initialize()
-    {
+    public void initialize() throws IOException {
         //setKurierzy();
-        //setPaczkiDoRozwiezienia();
+        setPaczkiDoRozwiezienia();
 
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -197,26 +203,26 @@ public class DistList_New_Presenter {
     }
 
     private void listOfCourier() throws IOException {
-        listaKurierow=CourierREST_GET();
-        for(Kurier iterator: listaKurierow){
-            if(iterator.getLista_rozwozowa_ID() != null){
-                listaKurierow.remove(iterator);
+        //listaKurierow=CourierREST_GET();
+
+            for (Kurier iterator : listaKurierow) {
+                if (iterator.getLista_rozwozowa_ID() != null) {
+                    listaKurierow.remove(iterator);
+                }
             }
-        }
-        if(listaKurierow.isEmpty())
-            saKurierzy = false;
+            if (listaKurierow.isEmpty())
+                saKurierzy = false;
 
 
-        if (!saKurierzy)
-        {
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Błąd kurierów");
-            alert.setHeaderText(null);
-            alert.setContentText("W tej chwili brak wolnych kurierów!");
-            alert.showAndWait();
+            if (!saKurierzy) {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Błąd kurierów");
+                alert.setHeaderText(null);
+                alert.setContentText("W tej chwili brak wolnych kurierów!");
+                alert.showAndWait();
 
-            onAnulujButtonClicked();
-        }
+                onAnulujButtonClicked();
+            }
     }
 
     private void setKurierzy() throws IOException {
@@ -282,12 +288,18 @@ public class DistList_New_Presenter {
 
     private List<Kurier> CourierREST_GET(){
         RestTemplate restTemplate = new RestTemplate();
-        List<Kurier> couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", List.class);
+        List<Kurier> couriers = (List<Kurier>)restTemplate.getForObject("http://localhost:8080/rest/kurier", Iterable.class);
         return couriers;
     }
     private List<Przesylka> PackageREST_GET(){
         RestTemplate restTemplate = new RestTemplate();
-        List<Przesylka> packages = restTemplate.getForObject("http://localhost:8080/rest/paczka", List.class);
+        ListaPaczek response = restTemplate.getForObject(
+                "http://localhost:8080/rest/przesylka",
+                ListaPaczek.class);
+        List<Przesylka> packages = response.getPrzesylki();
+        //RestTemplate restTemplate = new RestTemplate();
+        //ListaPaczek lista = restTemplate.getForObject("http://localhost:8080/rest/przesylka", ListaPaczek.class);
+        //List<Przesylka> packages = lista.getPrzesylki();
         return packages;
     }
 

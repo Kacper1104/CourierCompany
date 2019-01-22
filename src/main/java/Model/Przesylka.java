@@ -1,8 +1,9 @@
 package Model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Przesylka {
+public class Przesylka implements Serializable{
     private Integer ID;
     private String Status_przesylki;
     private String Opcja_dostawy;
