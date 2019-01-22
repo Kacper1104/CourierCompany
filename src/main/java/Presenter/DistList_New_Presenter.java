@@ -165,10 +165,14 @@ public class DistList_New_Presenter {
         //jesli znalazlo, to zmien saKurierzy na true
         //Start REST
         listaKurierow=CourierREST_GET();
+        for(Courier iterator: listaKurierow){
+            if(iterator.getLista_rozwozowa() != null){
+                listaKurierow.remove(iterator);
+            }
+        }
+        if(listaKurierow.isEmpty())
+            saKurierzy = false;
         //na liscie kurierzy z resta
-
-
-
 
 
         if (!saKurierzy)
@@ -198,18 +202,17 @@ public class DistList_New_Presenter {
 
     private void listOfPackages()
     {
-        // jesli są paczki to daj saPaczki na true
-        // to do
-        //////////////////wersja robocza
-        listaPaczekDoRozwiezienia = new ArrayList<>();
-        for (int i=0; i<5; i++)
-        {
-            //NIE DO KONCA CZAJE CO MA ROBIC TA LINIJKA
-            //listaPaczekDoRozwiezienia.add(new Package(i));
-        }
 
-        saPaczki = true;
-        /////////////////////////////
+        //przesylki bez listy rozwozowej
+        listaPaczekDoRozwiezienia = PackageREST_GET();
+        for(Package iterator: listaPaczekDoRozwiezienia){
+            if(iterator.getLista_rozwozowa_id() != null){
+                listaPaczekDoRozwiezienia.remove(iterator);
+            }
+        }
+        if(listaPaczekDoRozwiezienia.isEmpty())
+            saPaczki = false;
+
 
         if(!saPaczki)
         {
@@ -252,6 +255,11 @@ public class DistList_New_Presenter {
         RestTemplate restTemplate = new RestTemplate();
         List<Courier> couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", List.class);
         return couriers;
+    }
+    private List<Package> PackageREST_GET(){
+        RestTemplate restTemplate = new RestTemplate();
+        List<Package> packages = restTemplate.getForObject("http://localhost:8080/rest/paczka", List.class);
+        return packages;
     }
 
     private Courier getSelectedCourier()
