@@ -7,6 +7,15 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLSession;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.text.Normalizer;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -154,6 +163,11 @@ public class DistList_New_Presenter {
         // to do
         // dodaj do listKurierow
         //jesli znalazlo, to zmien saKurierzy na true
+        //Start REST
+        listaKurierow=null;
+
+
+
 
         if (!saKurierzy)
         {
