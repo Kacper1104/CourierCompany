@@ -1,170 +1,259 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="added pom">
-      <change afterPath="$PROJECT_DIR$/Server/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/DataBase/DataBase" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Awizo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/AwizoRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/AwizoResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Kurier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/KurierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/KurierResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowa.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowaResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Magazynier.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/MagazynierRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/MagazynierResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Nadawca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/NadawcaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/NadawcaResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/Odbiorca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/OdbiorcaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/OdbiorcaResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/java/server/ServerApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/test/java/server/ServerApplicationTests.java" afterDir="false" />
+    <list default="true" id="ffbb3b6a-b82a-4ead-9d41-bbc3138ea2ec" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Model/Advice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/description.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourierCompany.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CourierCompany.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/DataBase/DataBase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Awizo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/AwizoRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/AwizoResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Kurier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/KurierRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/KurierResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowa.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Lista_rozwozowaResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Magazynier.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/MagazynierRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/MagazynierResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Nadawca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/NadawcaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/NadawcaResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/Odbiorca.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/OdbiorcaRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/OdbiorcaResource.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/java/server/ServerApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Server/src/test/java/server/ServerApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/aopalliance-1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-aop-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-aspects-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-beans-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-context-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-context-support-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-core-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-expression-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-instrument-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-instrument-tomcat-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-jdbc-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-jms-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-messaging-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-orm-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-oxm-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-test-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/spring-tx-4.3.18.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/DataBase/DataBase" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Advice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Courier.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/DeliveryCosts.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/DistList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Package.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Recipient.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Sender.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/Status.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Model/WarehouseKeeper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/DistList_New_Presenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/Package_New_Edit_Presenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/Package_Return_Presenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/ReturnOfPackage_Presenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/Presenter/View_Presenter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/DistList_New.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/Package_NewEdit.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/ReturnOfPackage/ID_Choice.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/ID_Choice.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/ReturnOfPackage/Package_Return.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/Package_Return.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/View/View.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/View.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/arrow_po_zwrocie.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/arrow_po_zwrocie.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourierCompany/koperta.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/koperta.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/DistList_NewEdit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/DistList_Overview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/Package_NewEdit.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/Package_Overview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/Program_Overview.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/View/View.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/sample/Controller.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/sample/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/FirstFX/sample/sample.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Advice.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Courier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Courier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DeliveryCosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DeliveryCosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/DistList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/DistList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Package.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Package.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Recipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Sender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Sender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/Status.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Status.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Model/WarehouseKeeper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/WarehouseKeeper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/Package_New_Edit_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/Package_Return_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/ReturnOfPackage_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/ReturnOfPackage_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Presenter/View_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/DistList_New.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/DistList_New.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/Package_NewEdit.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View/Package_NewEdit.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/ReturnOfPackage/Package_Return.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/View/View.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/arrow_po_zwrocie.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/koperta.png" beforeDir="false" />
     </list>
-    <ignored path="JavaFxApplication.iws" />
-    <ignored path=".idea/workspace.xml" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <ignored path="$PROJECT_DIR$/client/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="CreatePatchCommitExecutor">
-    <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DataBase" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DataBase" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DataBase" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="DataBase" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="main: schema" type="90513b60:SqliteImplModel$Schema" />
-        <item name="Przesylka: table" type="ffe0bd85:SqliteImplModel$Table" />
-      </path>
-    </expand>
-    <select />
-  </component>
-  <component name="DebuggerManager">
-    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-      <breakpoint>
-        <option name="NOTIFY_CAUGHT" value="true" />
-        <option name="NOTIFY_UNCAUGHT" value="true" />
-        <option name="ENABLED" value="false" />
-        <option name="LOG_ENABLED" value="false" />
-        <option name="LOG_EXPRESSION_ENABLED" value="false" />
-        <option name="SUSPEND_POLICY" value="SuspendAll" />
-        <option name="SUSPEND" value="true" />
-        <option name="COUNT_FILTER_ENABLED" value="false" />
-        <option name="COUNT_FILTER" value="0" />
-        <option name="CONDITION_ENABLED" value="true" />
-        <option name="CLASS_FILTERS_ENABLED" value="false" />
-        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
-        <option name="CONDITION" value="" />
-        <option name="LOG_MESSAGE" value="" />
-      </breakpoint>
-    </breakpoint_any>
-    <ui_properties converted="true" />
-    <breakpoint_rules converted="true" />
-  </component>
-  <component name="FavoritesManager">
-    <favorites_list name="JavaFxApplication" />
-  </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/WarehouseKeeper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-238">
-              <caret line="166" column="26" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="47" />
               <folding>
-                <element signature="method#onButtonLeftClicked#0;class#DistList_New_Presenter#0" />
-                <element signature="method#setNaLiscieListview#0;class#DistList_New_Presenter#0" />
-                <element signature="method#onButtonRightClicked#0;class#DistList_New_Presenter#0" />
-                <element signature="method#onAnulujButtonClicked#0;class#DistList_New_Presenter#0" />
-                <element signature="method#listOfPackages#0;class#DistList_New_Presenter#0" />
-                <element signature="method#aktualizujPaczkiDoRozwiezienia#0;class#DistList_New_Presenter#0" />
-                <element signature="e#6949#6950#0" expanded="true" />
-                <element signature="e#7063#7064#0" expanded="true" />
+                <element signature="e#611#612#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#673#674#0" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#733#734#0" expanded="true" />
+                <element signature="e#761#762#0" expanded="true" />
+                <element signature="e#803#804#0" expanded="true" />
+                <element signature="e#837#838#0" expanded="true" />
+                <element signature="e#869#870#0" expanded="true" />
+                <element signature="e#897#898#0" expanded="true" />
+                <element signature="e#939#940#0" expanded="true" />
+                <element signature="e#973#974#0" expanded="true" />
+                <element signature="e#1023#1024#0" expanded="true" />
+                <element signature="e#1061#1062#0" expanded="true" />
+                <element signature="e#1131#1132#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1227#1228#0" expanded="true" />
+                <element signature="e#1265#1266#0" expanded="true" />
+                <element signature="e#1327#1328#0" expanded="true" />
+                <element signature="e#1381#1382#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CourierCompany.iml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../../Server/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/DistList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
+            <state relative-caret-position="950">
+              <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#661#662#0" expanded="true" />
+                <element signature="e#688#689#0" expanded="true" />
+                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#758#759#0" expanded="true" />
+                <element signature="e#793#794#0" expanded="true" />
+                <element signature="e#823#824#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
+                <element signature="e#1000#1001#0" expanded="true" />
+                <element signature="e#1028#1029#0" expanded="true" />
+                <element signature="e#1071#1072#0" expanded="true" />
+                <element signature="e#1103#1104#0" expanded="true" />
+                <element signature="e#1160#1161#0" expanded="true" />
+                <element signature="e#1202#1203#0" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
+                <element signature="e#1220#1221#0" expanded="true" />
+                <element signature="e#1269#1270#0" expanded="true" />
+                <element signature="e#1305#1306#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Presenter/View_Presenter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Recipient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
+            <state relative-caret-position="627">
+              <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+              <folding>
+                <element signature="e#1211#1212#0" expanded="true" />
+                <element signature="e#1243#1244#0" expanded="true" />
+                <element signature="e#1300#1301#0" expanded="true" />
+                <element signature="e#1342#1343#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Package.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1479">
+              <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1966#1967#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+                <element signature="e#2039#2040#0" expanded="true" />
+                <element signature="e#2085#2086#0" expanded="true" />
+                <element signature="e#2122#2123#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2203#2204#0" expanded="true" />
+                <element signature="e#2244#2245#0" expanded="true" />
+                <element signature="e#2287#2288#0" expanded="true" />
+                <element signature="e#2326#2327#0" expanded="true" />
+                <element signature="e#2366#2367#0" expanded="true" />
+                <element signature="e#2402#2403#0" expanded="true" />
+                <element signature="e#2449#2450#0" expanded="true" />
+                <element signature="e#2490#2491#0" expanded="true" />
+                <element signature="e#2533#2534#0" expanded="true" />
+                <element signature="e#2572#2573#0" expanded="true" />
+                <element signature="e#2613#2614#0" expanded="true" />
+                <element signature="e#2647#2648#0" expanded="true" />
+                <element signature="e#2684#2685#0" expanded="true" />
+                <element signature="e#2717#2718#0" expanded="true" />
+                <element signature="e#2754#2755#0" expanded="true" />
+                <element signature="e#2782#2783#0" expanded="true" />
+                <element signature="e#2851#2852#0" expanded="true" />
+                <element signature="e#2911#2912#0" expanded="true" />
+                <element signature="e#3248#3249#0" expanded="true" />
+                <element signature="e#3296#3297#0" expanded="true" />
+                <element signature="e#3360#3361#0" expanded="true" />
+                <element signature="e#3416#3417#0" expanded="true" />
+                <element signature="e#3474#3475#0" expanded="true" />
+                <element signature="e#3524#3525#0" expanded="true" />
+                <element signature="e#3588#3589#0" expanded="true" />
+                <element signature="e#3644#3645#0" expanded="true" />
+                <element signature="e#3714#3715#0" expanded="true" />
+                <element signature="e#3774#3775#0" expanded="true" />
+                <element signature="e#3826#3827#0" expanded="true" />
+                <element signature="e#3870#3871#0" expanded="true" />
+                <element signature="e#3927#3928#0" expanded="true" />
+                <element signature="e#3973#3974#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="290">
+              <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -173,36 +262,66 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Presenter/Package_New_Edit_Presenter.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="44" selection-start-line="44" selection-end-line="44" />
-              <folding>
-                <element signature="method#newRecipient#0;class#Package_New_Edit_Presenter#0" />
-                <element signature="method#setDataToCombo#0;class#Package_New_Edit_Presenter#0" />
-                <element signature="method#checkFormatOfCena#0;class#Package_New_Edit_Presenter#0" />
-              </folding>
+            <state relative-caret-position="170">
+              <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Advice.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
+            <state relative-caret-position="68">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
+        <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Date.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="147">
+              <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Status.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Sender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
-                <element signature="e#1937#1938#0" expanded="true" />
-                <element signature="e#1965#1966#0" expanded="true" />
+                <element signature="e#920#921#0" expanded="true" />
+                <element signature="e#945#946#0" expanded="true" />
+                <element signature="e#1016#1017#0" expanded="true" />
+                <element signature="e#1095#1096#0" expanded="true" />
+                <element signature="e#1210#1211#0" expanded="true" />
+                <element signature="e#1269#1270#0" expanded="true" />
+                <element signature="e#1344#1345#0" expanded="true" />
+                <element signature="e#1417#1418#0" expanded="true" />
+                <element signature="e#1520#1521#0" expanded="true" />
+                <element signature="e#1591#1592#0" expanded="true" />
+                <element signature="e#1690#1691#0" expanded="true" />
+                <element signature="e#1749#1750#0" expanded="true" />
+                <element signature="e#1824#1825#0" expanded="true" />
+                <element signature="e#1883#1884#0" expanded="true" />
+                <element signature="e#1958#1959#0" expanded="true" />
+                <element signature="e#2032#2033#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#2184#2185#0" expanded="true" />
+                <element signature="e#2282#2283#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,76 +329,44 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaFXApplication" />
-        <option value="XSLT Stylesheet" />
-        <option value="FxmlFile" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindManager">
-    <FindUsagesManager>
-      <setting name="OPEN_NEW_TAB" value="false" />
-    </FindUsagesManager>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/View/DistList_OverView.java" />
-        <option value="$PROJECT_DIR$/src/View/DistList_NewEdit.java" />
-        <option value="$PROJECT_DIR$/src/View/DistList_Overview.java" />
-        <option value="$PROJECT_DIR$/src/View/View.java" />
-        <option value="$PROJECT_DIR$/src/View/DistList_Overview.fxml" />
-        <option value="$PROJECT_DIR$/src/sample/Main.java" />
-        <option value="$PROJECT_DIR$/src/Controller/PackageCOntroller.java" />
-        <option value="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java" />
-        <option value="$PROJECT_DIR$/src/Model/Status.java" />
-        <option value="$PROJECT_DIR$/src/Model/DistList.java" />
-        <option value="$PROJECT_DIR$/src/Model/DeliveryCosts.java" />
-        <option value="$PROJECT_DIR$/src/Model/Advice.java" />
-        <option value="$PROJECT_DIR$/src/View/ReturnOfPackage/Package_Return.java" />
-        <option value="$PROJECT_DIR$/src/View/ReturnOfPackage/Package_Return.fxml" />
-        <option value="$PROJECT_DIR$/src/View/Package_NewEdit.fxml" />
-        <option value="$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/Sender.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/ReturnOfPackage_Presenter.java" />
-        <option value="$PROJECT_DIR$/src/View/View.fxml" />
-        <option value="$PROJECT_DIR$/src/Presenter/Package_Return_Presenter.java" />
-        <option value="$PROJECT_DIR$/src/Model/Courier.java" />
-        <option value="$PROJECT_DIR$/src/Model/WarehouseKeeper.java" />
-        <option value="$PROJECT_DIR$/src/View/DistList_New.fxml" />
-        <option value="$PROJECT_DIR$/src/Model/Recipient.java" />
-        <option value="$PROJECT_DIR$/src/Model/Package.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/Package_New_Edit_Presenter.java" />
-        <option value="$PROJECT_DIR$/src/REST/Rest.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/View_Presenter.java" />
-        <option value="$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/../../Server/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Advice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Courier.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/WarehouseKeeper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/DistList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Sender.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Recipient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Model/Package.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" />
       </list>
     </option>
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="490" />
-    <option name="y" value="-13" />
-    <option name="width" value="1934" />
-    <option name="height" value="1047" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="1" id="Add" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -297,61 +384,80 @@
               <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="Presenter" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
               <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="View" type="462c0819:PsiDirectoryNode" />
               <item name="ReturnOfPackage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourierCompany" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourierCompany" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GoToClass.includeLibraries" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="MemberChooser.copyJavadoc" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="OverrideImplement.combined" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548115934341" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="Sqlite (Xerial)" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../gs-accessing-data-mysql" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548148821564" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="recentsLimit" value="5" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Kacper\Desktop\App+Srv\CourierCompany" />
-      <recent name="D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany\src" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/main/\" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Kacper\Desktop\FirstFX\src\View" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -366,64 +472,10 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.View_Presenter">
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
-      <module name="" />
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <method />
-    </configuration>
-    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
-      <Host>localhost</Host>
-      <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="View.ReturnOfPackage.Package_Return" />
-      <module name="CourierCompany" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="sample.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager">
     <configuration name="View_Presenter" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Presenter.View_Presenter" />
       <module name="CourierCompany" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="Presenter.*" />
@@ -434,93 +486,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="FirstFX" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="TestNG">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="moduleWithDependencies" />
-      </option>
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file enabled="true" id="idea.log" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="Application.View_Presenter" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.View_Presenter" />
@@ -532,698 +497,305 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="" />
-      <created>1359379246138</created>
+      <changelist id="ffbb3b6a-b82a-4ead-9d41-bbc3138ea2ec" name="Default Changelist" comment="" />
+      <created>1548117581748</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1359379246138</updated>
-      <workItem from="1359379250712" duration="1302000" />
-      <workItem from="1547486045782" duration="1152000" />
-      <workItem from="1547492523972" duration="712000" />
-      <workItem from="1547493281083" duration="3322000" />
-      <workItem from="1547638295797" duration="5512000" />
-      <workItem from="1547734159792" duration="2280000" />
-      <workItem from="1547825654927" duration="6431000" />
-      <workItem from="1547913548101" duration="794000" />
-      <workItem from="1547990509742" duration="10872000" />
-      <workItem from="1548008728181" duration="3336000" />
-      <workItem from="1548016946203" duration="2367000" />
-      <workItem from="1548019350549" duration="2605000" />
-      <workItem from="1548092872074" duration="14592000" />
-      <workItem from="1548110189016" duration="2200000" />
-      <workItem from="1548113037292" duration="2929000" />
+      <updated>1548117581748</updated>
+      <workItem from="1548117583146" duration="676000" />
+      <workItem from="1548145588112" duration="3231000" />
     </task>
-    <task id="LOCAL-00001" summary="Structure modification">
-      <created>1547486892587</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1547486892587</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Added DataBase Without tables connections">
-      <created>1547496339524</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1547496339524</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Database with connections">
-      <created>1547642081041</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1547642081041</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Model classes implementation">
-      <created>1547646368067</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1547646368067</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Added ID_choice fxml">
-      <created>1547736217352</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1547736217353</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Added Package_Return fxml">
-      <created>1547740689217</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1547740689217</updated>
-    </task>
-    <task id="LOCAL-00007" summary="finished package_return">
-      <created>1547827632322</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1547827632322</updated>
-    </task>
-    <task id="LOCAL-00008" summary="created DistList_New">
-      <created>1547831784197</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1547831784197</updated>
-    </task>
-    <task id="LOCAL-00009" summary="created View">
-      <created>1547834063252</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1547834063252</updated>
-    </task>
-    <task id="LOCAL-00010" summary="added koperta.PNG">
-      <created>1547834123483</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1547834123483</updated>
-    </task>
-    <task id="LOCAL-00011" summary="created Package_NewEdit">
-      <created>1547914641861</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1547914641861</updated>
-    </task>
-    <task id="LOCAL-00012" summary="created button listeners in View_presenter">
-      <created>1547996959775</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1547996959775</updated>
-    </task>
-    <task id="LOCAL-00013" summary="started implementation class PAckage_New_Edit_Presenter">
-      <created>1548001388271</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1548001388271</updated>
-    </task>
-    <task id="LOCAL-00014" summary="added mode things">
-      <created>1548011479810</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1548011479810</updated>
-    </task>
-    <task id="LOCAL-00015" summary="implementation presenter PAckage_Return_Presenter, implementation getters and setters classes Package, REcipient, Sender">
-      <created>1548020041446</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1548020041446</updated>
-    </task>
-    <task id="LOCAL-00016" summary="implementation presenter DistList_New_Presenter">
-      <created>1548021738176</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1548021738176</updated>
-    </task>
-    <task id="LOCAL-00017" summary="implementation aler in ID_choice">
-      <created>1548093849965</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1548093849966</updated>
-    </task>
-    <task id="LOCAL-00018" summary="implementation alert in DistList_New_Presenter">
-      <created>1548096363313</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1548096363313</updated>
-    </task>
-    <task id="LOCAL-00019" summary="implementation alert in DistList_New_Presenter">
-      <created>1548101419518</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1548101419518</updated>
-    </task>
-    <task id="LOCAL-00020" summary="implementation logic of lists in DistList_New_Presenter">
-      <created>1548105132082</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1548105132082</updated>
-    </task>
-    <task id="LOCAL-00021" summary="fixed DistList_New_Presenter">
-      <created>1548107058252</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1548107058252</updated>
-    </task>
-    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60406000" />
+    <option name="totallyTimeSpent" value="3907000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.18017058" />
-      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2521322" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
-      <window_info id="UI Designer" order="4" />
-      <window_info id="Capture Tool" order="5" />
-      <window_info id="Favorites" order="6" />
-      <window_info id="Nl-Palette" order="7" />
-      <window_info anchor="bottom" id="REST Client" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32827735" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Application Servers" order="7" />
-      <window_info anchor="bottom" id="Changes" order="8" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.3295325" />
-      <window_info anchor="bottom" id="Problems" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" />
-      <window_info anchor="bottom" id="Docker" order="15" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="16" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="JetGradle" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Database" order="6" weight="0.23952739" />
-      <window_info anchor="right" id="Properties" order="7" />
-      <window_info anchor="right" id="Capture Analysis" order="8" />
-      <window_info anchor="right" id="Palette&#9;" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="right" id="SciView" order="11" />
-      <window_info anchor="right" id="Maven" order="12" />
-    </layout>
-    <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.6703755" visible="true" weight="0.17185822" />
-      <window_info id="Structure" order="1" weight="0.25" />
-      <window_info id="Nl-Palette" order="2" />
-      <window_info id="Capture Tool" order="3" />
-      <window_info id="Designer" order="4" />
+      <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
-      <window_info id="Image Layers" order="6" />
-      <window_info id="Favorites" order="7" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="REST Client" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32839224" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32928178" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" />
-      <window_info anchor="bottom" id="Application Servers" order="8" />
-      <window_info anchor="bottom" id="Profiler" order="9" />
-      <window_info anchor="bottom" id="Changes" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3295325" />
-      <window_info anchor="bottom" id="Version Control" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" />
-      <window_info anchor="bottom" id="Problems" order="14" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" visible="true" weight="0.32827735" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="right" id="Database" order="5" weight="0.26333332" />
-      <window_info anchor="right" id="JetGradle" order="6" />
-      <window_info anchor="right" id="Properties" order="7" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="JSF" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
-      <window_info anchor="right" id="Capture Analysis" order="9" />
-      <window_info anchor="right" id="Theme Preview" order="10" />
-      <window_info anchor="right" id="SciView" order="11" />
-    </layout-to-restore>
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Structure modification" />
-    <MESSAGE value="Added DataBase Without tables connections" />
-    <MESSAGE value="Database with connections" />
-    <MESSAGE value="Model classes implementation" />
-    <MESSAGE value="Added ID_choice fxml" />
-    <MESSAGE value="Added Package_Return fxml" />
-    <MESSAGE value="finished package_return" />
-    <MESSAGE value="created DistList_New" />
-    <MESSAGE value="created View" />
-    <MESSAGE value="added koperta.PNG" />
-    <MESSAGE value="created Package_NewEdit" />
-    <MESSAGE value="created button listeners in View_presenter" />
-    <MESSAGE value="started implementation class PAckage_New_Edit_Presenter" />
-    <MESSAGE value="added mode things" />
-    <MESSAGE value="implementation presenter PAckage_Return_Presenter, implementation getters and setters classes Package, REcipient, Sender" />
-    <MESSAGE value="implementation presenter DistList_New_Presenter" />
-    <MESSAGE value="implementation aler in ID_choice" />
-    <MESSAGE value="implementation alert in DistList_New_Presenter" />
-    <MESSAGE value="implementation logic of lists in DistList_New_Presenter" />
-    <MESSAGE value="fixed DistList_New_Presenter" />
-    <MESSAGE value="added pom" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pom" />
-  </component>
-  <component name="antWorkspaceConfiguration">
-    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
-    <option name="FILTER_TARGETS" value="false" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Model/Nadawca.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Odbiorca.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Notification.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Delivery.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/StoreKeeper.java" />
-    <entry file="file://$PROJECT_DIR$/src/Presenter/RecipientPresenter.java" />
-    <entry file="file://$PROJECT_DIR$/src/Presenter/SenderPresenter.java" />
-    <entry file="file://$PROJECT_DIR$/src/Presenter/WarehouseKeeperPresenter.java" />
-    <entry file="das://table:/a99e0fcd/29fe31f7-9f86-40a0-96fe-6e587c47b3d1/main.sqlite_master" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/29fe31f7-9f86-40a0-96fe-6e587c47b3d1/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/da1eaaed-c1d4-4a9d-87c8-7abd05c8bc8c/console.sql" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c0aca0c9-d466-400c-8c83-4c910919bcd1/console.sql" />
-    <entry file="das://table:/a99e0fcd/c0aca0c9-d466-400c-8c83-4c910919bcd1/main.Awizo" />
-    <entry file="uml://DATABASE/c0aca0c9-d466-400c-8c83-4c910919bcd1">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>c0aca0c9-d466-400c-8c83-4c910919bcd1</OriginalElement>
-          <nodes>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_master</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_Dostawy</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_sequence</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier</node>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.6060948081264108" x="1105.0" y="400.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Tab1">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Tab1</OriginalElement>
-          <nodes>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Tab2</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="75.0" y="102.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Tab2">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Tab2</OriginalElement>
-          <nodes>
-            <node x="" y="">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Tab2</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="1.0" x="238.0" y="6.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/a99e0fcd/c0aca0c9-d466-400c-8c83-4c910919bcd1/main.Tab2" />
-    <entry file="das://table:/a99e0fcd/c0aca0c9-d466-400c-8c83-4c910919bcd1/main.Koszty_dostawy" />
-    <entry file="das://table:/a99e0fcd/c0aca0c9-d466-400c-8c83-4c910919bcd1/main.Status" />
-    <entry file="das://table:/a99e0fcd/c0aca0c9-d466-400c-8c83-4c910919bcd1/main.Przesylka" />
-    <entry file="file://$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Status.java">
+    <entry file="file://$PROJECT_DIR$/src/Model/Advice.java" />
+    <entry file="file://$PROJECT_DIR$/../Server/src/main/java/server/PrzesylkaResource.java" />
+    <entry file="file://$PROJECT_DIR$/../Server/src/main/java/server/Przesylka.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/View_Presenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="45" selection-start-line="10" selection-start-column="45" selection-end-line="10" selection-end-column="45" />
+        <state relative-caret-position="119">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Advice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="8" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="41" />
           <folding>
-            <element signature="e#163#164#0" />
-            <element signature="e#215#216#0" />
+            <element signature="e#428#429#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#529#530#0" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#669#670#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#772#773#0" expanded="true" />
+            <element signature="e#829#830#0" expanded="true" />
+            <element signature="e#877#878#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/DistList.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="12" column="59" selection-start-line="12" selection-start-column="59" selection-end-line="12" selection-end-column="59" />
+        <state relative-caret-position="102">
+          <caret line="6" column="8" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ReturnOfPackage/Package_Return.java" />
-    <entry file="uml://DATABASE/c0aca0c9-d466-400c-8c83-4c910919bcd1.SCHEMA:main">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>c0aca0c9-d466-400c-8c83-4c910919bcd1.SCHEMA:main</OriginalElement>
-          <nodes>
-            <node x="273.0" y="263.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy</node>
-            <node x="1122.75" y="565.5">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier</node>
-            <node x="810.0" y="263.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status</node>
-            <node x="0.0" y="1018.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_master</node>
-            <node x="1076.0" y="235.5">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa</node>
-            <node x="201.0" y="1018.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.sqlite_sequence</node>
-            <node x="555.0" y="855.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo</node>
-            <node x="528.5" y="471.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka</node>
-            <node x="0.0" y="168.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca</node>
-            <node x="1094.5" y="0.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier</node>
-            <node x="538.0" y="168.0">c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca</node>
-          </nodes>
-          <notes />
-          <edges>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Awizo" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka">
-              <point x="0.0" y="-59.0" />
-              <point x="0.0" y="167.0" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Kurier" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa">
-              <point x="0.0" y="-72.5" />
-              <point x="54.25" y="59.0" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Odbiorca">
-              <point x="-108.39999999999998" y="-167.0" />
-              <point x="555.6" y="451.0" />
-              <point x="126.5" y="451.0" />
-              <point x="0.0" y="126.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa">
-              <point x="108.39999999999998" y="-167.0" />
-              <point x="772.4" y="451.0" />
-              <point x="1130.25" y="451.0" />
-              <point x="-54.25" y="59.0" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Status">
-              <point x="54.200000000000045" y="-167.0" />
-              <point x="718.2" y="441.0" />
-              <point x="933.0" y="441.0" />
-              <point x="0.0" y="31.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Koszty_dostawy">
-              <point x="-54.200000000000045" y="-167.0" />
-              <point x="609.8" y="441.0" />
-              <point x="395.5" y="441.0" />
-              <point x="0.0" y="31.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Przesylka" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca">
-              <point x="0.0" y="-167.0" />
-              <point x="0.0" y="126.5" />
-            </edge>
-            <edge source="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Lista_rozwozowa" target="c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Magazynier">
-              <point x="0.0" y="-59.0" />
-              <point x="0.0" y="59.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="0.6724565756823822" x="678.0" y="515.0" />
-          <SelectedNodes>
-            <node>c0aca0c9-d466-400c-8c83-4c910919bcd1.TABLE:main.Nadawca</node>
-          </SelectedNodes>
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/View.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/DeliveryCosts.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Courier.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="6" column="33" lean-forward="true" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/Package_NewEdit.fxml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/DeliveryCosts.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="39" column="39" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="jar://D:/Programy/Java JDK/javafx-src.zip!/javafx/fxml/FXMLLoader.java" />
-    <entry file="file://$PROJECT_DIR$/src/Model/Sender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
-          <folding>
-            <element signature="e#817#818#0" />
-            <element signature="e#850#851#0" />
-            <element signature="e#878#879#0" />
-            <element signature="e#910#911#0" />
-            <element signature="e#941#942#0" />
-            <element signature="e#986#987#0" />
-            <element signature="e#1026#1027#0" />
-            <element signature="e#1068#1069#0" />
-            <element signature="e#1106#1107#0" />
-            <element signature="e#1168#1169#0" />
-            <element signature="e#1222#1223#0" />
-            <element signature="e#1254#1255#0" />
-            <element signature="e#1282#1283#0" />
-            <element signature="e#1324#1325#0" />
-            <element signature="e#1358#1359#0" />
-            <element signature="e#1397#1398#0" />
-            <element signature="e#1432#1433#0" />
-            <element signature="e#1488#1489#0" />
-            <element signature="e#1536#1537#0" />
-            <element signature="e#1574#1575#0" />
-            <element signature="e#1608#1609#0" />
-            <element signature="e#1662#1663#0" />
-            <element signature="e#1708#1709#0" />
-            <element signature="e#1740#1741#0" />
-            <element signature="e#1768#1769#0" />
-            <element signature="e#1810#1811#0" />
-            <element signature="e#1844#1845#0" />
-            <element signature="e#1876#1877#0" />
-            <element signature="e#1904#1905#0" />
-            <element signature="e#1946#1947#0" />
-            <element signature="e#1980#1981#0" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ReturnOfPackage/Package_Return.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="126" column="132" selection-start-line="126" selection-start-column="62" selection-end-line="126" selection-end-column="132" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/ReturnOfPackage/ID_Choice.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="257" selection-start-line="10" selection-start-column="257" selection-end-line="10" selection-end-column="257" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/View.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="67" column="23" lean-forward="true" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/Package_Return_Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="924">
-          <caret line="55" column="8" selection-start-line="55" selection-start-column="8" selection-end-line="55" selection-end-column="8" />
-          <folding>
-            <element signature="method#findSender#0;class#Package_Return_Presenter#0" />
-            <element signature="method#findRecpient#0;class#Package_Return_Presenter#0" />
-            <element signature="method#findPackage#0;class#Package_Return_Presenter#0" />
-            <element signature="method#setContent#0;class#Package_Return_Presenter#0" />
-            <element signature="method#setOdbiorcaPrzed#0;class#Package_Return_Presenter#0" />
-            <element signature="method#setNadawcaPrzed#0;class#Package_Return_Presenter#0" />
-            <element signature="method#setOdbiorcaPo#0;class#Package_Return_Presenter#0" />
-            <element signature="method#setNadawcaPo#0;class#Package_Return_Presenter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/ReturnOfPackage_Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="82" column="12" lean-forward="true" selection-start-line="82" selection-start-column="12" selection-end-line="86" selection-end-column="62" />
-          <folding>
-            <element signature="method#showAlert#0;class#ReturnOfPackage_Presenter#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Courier.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#587#588#0" expanded="true" />
-            <element signature="e#649#650#0" expanded="true" />
-            <element signature="e#703#704#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/WarehouseKeeper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="16" column="47" selection-start-line="16" selection-start-column="47" selection-end-line="16" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/View/DistList_New.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="94" column="114" selection-start-line="94" selection-start-column="114" selection-end-line="94" selection-end-column="114" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Recipient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Advice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="68" selection-start-line="12" selection-start-column="68" selection-end-line="12" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/Package.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="21" />
-          <folding>
-            <element signature="e#1937#1938#0" expanded="true" />
-            <element signature="e#1965#1966#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/REST/Rest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="19" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/View_Presenter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="59" column="28" selection-start-line="59" selection-start-column="28" selection-end-line="59" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CourierCompany.iml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/ReturnOfPackage/ID_Choice.fxml">
       <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../Server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="30" column="8" selection-start-line="30" selection-start-column="8" selection-end-line="30" selection-end-column="8" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/main/java/View/DistList_New.fxml">
+      <provider selected="true" editor-type-id="text-editor" />
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/Package_New_Edit_Presenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/WarehouseKeeper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="47" />
           <folding>
-            <element signature="method#newRecipient#0;class#Package_New_Edit_Presenter#0" />
-            <element signature="method#setDataToCombo#0;class#Package_New_Edit_Presenter#0" />
-            <element signature="method#checkFormatOfCena#0;class#Package_New_Edit_Presenter#0" />
+            <element signature="e#611#612#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#673#674#0" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#733#734#0" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#837#838#0" expanded="true" />
+            <element signature="e#869#870#0" expanded="true" />
+            <element signature="e#897#898#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#973#974#0" expanded="true" />
+            <element signature="e#1023#1024#0" expanded="true" />
+            <element signature="e#1061#1062#0" expanded="true" />
+            <element signature="e#1131#1132#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1227#1228#0" expanded="true" />
+            <element signature="e#1265#1266#0" expanded="true" />
+            <element signature="e#1327#1328#0" expanded="true" />
+            <element signature="e#1381#1382#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Presenter/DistList_New_Presenter.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/DistList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-238">
-          <caret line="166" column="26" selection-start-line="166" selection-start-column="26" selection-end-line="166" selection-end-column="26" />
+        <state relative-caret-position="950">
+          <caret line="56" column="25" selection-start-line="56" selection-start-column="25" selection-end-line="56" selection-end-column="25" />
           <folding>
-            <element signature="method#onButtonLeftClicked#0;class#DistList_New_Presenter#0" />
-            <element signature="method#setNaLiscieListview#0;class#DistList_New_Presenter#0" />
-            <element signature="method#onButtonRightClicked#0;class#DistList_New_Presenter#0" />
-            <element signature="method#onAnulujButtonClicked#0;class#DistList_New_Presenter#0" />
-            <element signature="method#listOfPackages#0;class#DistList_New_Presenter#0" />
-            <element signature="method#aktualizujPaczkiDoRozwiezienia#0;class#DistList_New_Presenter#0" />
-            <element signature="e#6949#6950#0" expanded="true" />
-            <element signature="e#7063#7064#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#661#662#0" expanded="true" />
+            <element signature="e#688#689#0" expanded="true" />
+            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#758#759#0" expanded="true" />
+            <element signature="e#793#794#0" expanded="true" />
+            <element signature="e#823#824#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1028#1029#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1103#1104#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1305#1306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Sender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
+          <folding>
+            <element signature="e#920#921#0" expanded="true" />
+            <element signature="e#945#946#0" expanded="true" />
+            <element signature="e#1016#1017#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+            <element signature="e#1210#1211#0" expanded="true" />
+            <element signature="e#1269#1270#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1417#1418#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1591#1592#0" expanded="true" />
+            <element signature="e#1690#1691#0" expanded="true" />
+            <element signature="e#1749#1750#0" expanded="true" />
+            <element signature="e#1824#1825#0" expanded="true" />
+            <element signature="e#1883#1884#0" expanded="true" />
+            <element signature="e#1958#1959#0" expanded="true" />
+            <element signature="e#2032#2033#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2184#2185#0" expanded="true" />
+            <element signature="e#2282#2283#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Recipient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="627">
+          <caret line="81" column="5" selection-start-line="81" selection-start-column="5" selection-end-line="81" selection-end-column="5" />
+          <folding>
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1342#1343#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_121/src.zip!/java/util/Date.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="130" column="13" selection-start-line="130" selection-start-column="13" selection-end-line="130" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_New_Edit_Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="68" column="42" selection-start-line="68" selection-start-column="42" selection-end-line="68" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/Package_Return_Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Package.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1479">
+          <caret line="138" column="5" selection-start-line="138" selection-start-column="5" selection-end-line="138" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1966#1967#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+            <element signature="e#2039#2040#0" expanded="true" />
+            <element signature="e#2085#2086#0" expanded="true" />
+            <element signature="e#2122#2123#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2203#2204#0" expanded="true" />
+            <element signature="e#2244#2245#0" expanded="true" />
+            <element signature="e#2287#2288#0" expanded="true" />
+            <element signature="e#2326#2327#0" expanded="true" />
+            <element signature="e#2366#2367#0" expanded="true" />
+            <element signature="e#2402#2403#0" expanded="true" />
+            <element signature="e#2449#2450#0" expanded="true" />
+            <element signature="e#2490#2491#0" expanded="true" />
+            <element signature="e#2533#2534#0" expanded="true" />
+            <element signature="e#2572#2573#0" expanded="true" />
+            <element signature="e#2613#2614#0" expanded="true" />
+            <element signature="e#2647#2648#0" expanded="true" />
+            <element signature="e#2684#2685#0" expanded="true" />
+            <element signature="e#2717#2718#0" expanded="true" />
+            <element signature="e#2754#2755#0" expanded="true" />
+            <element signature="e#2782#2783#0" expanded="true" />
+            <element signature="e#2851#2852#0" expanded="true" />
+            <element signature="e#2911#2912#0" expanded="true" />
+            <element signature="e#3248#3249#0" expanded="true" />
+            <element signature="e#3296#3297#0" expanded="true" />
+            <element signature="e#3360#3361#0" expanded="true" />
+            <element signature="e#3416#3417#0" expanded="true" />
+            <element signature="e#3474#3475#0" expanded="true" />
+            <element signature="e#3524#3525#0" expanded="true" />
+            <element signature="e#3588#3589#0" expanded="true" />
+            <element signature="e#3644#3645#0" expanded="true" />
+            <element signature="e#3714#3715#0" expanded="true" />
+            <element signature="e#3774#3775#0" expanded="true" />
+            <element signature="e#3826#3827#0" expanded="true" />
+            <element signature="e#3870#3871#0" expanded="true" />
+            <element signature="e#3927#3928#0" expanded="true" />
+            <element signature="e#3973#3974#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="168" column="8" selection-start-line="168" selection-start-column="8" selection-end-line="168" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1234,11 +806,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>unnamed</last-edited>
+          <last-edited>CourierCompany:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1246,7 +819,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Detection</last-edited>
+          <last-edited>Web</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1281,7 +854,20 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|CourierCompany</last-edited>
+          <last-edited>CourierCompany</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1293,6 +879,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Mojarra-1.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
