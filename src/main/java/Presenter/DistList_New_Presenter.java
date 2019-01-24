@@ -3,6 +3,7 @@ package Presenter;
 import Model.Kurier;
 import Model.Lista_rozwozowa;
 import Model.Przesylka;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -11,11 +12,16 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.springframework.core.ParameterizedTypeReference;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
@@ -45,10 +51,10 @@ public class DistList_New_Presenter {
     private Kurier wybranyKurier;
 
     @FXML
-    public void initialize()
-    {
-        //setKurierzy();
-        //setPaczkiDoRozwiezienia();
+    public void initialize() throws IOException {
+        setKurierzy();
+        setPaczkiDoRozwiezienia();
+
 
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
@@ -143,8 +149,6 @@ public class DistList_New_Presenter {
 
     }
 
-
-
     @FXML
     private void onOkButtonClicked() throws IOException {
         if (!saPaczkiNaLiscieRozwozowej())
@@ -205,6 +209,8 @@ public class DistList_New_Presenter {
         }
         if(listaKurierow.isEmpty())
             saKurierzy = false;
+        else
+            saKurierzy = true;
 
 
         if (!saKurierzy)
@@ -234,13 +240,18 @@ public class DistList_New_Presenter {
     private void listOfPackages() throws IOException {
 
         listaPaczekDoRozwiezienia = PackageREST_GET();
-        for(Przesylka iterator: listaPaczekDoRozwiezienia){
+
+        for(Przesylka  iterator: listaPaczekDoRozwiezienia){
             if(iterator.getLista_rozwozowa_ID() != null){
                 listaPaczekDoRozwiezienia.remove(iterator);
             }
         }
+
+
         if(listaPaczekDoRozwiezienia.isEmpty())
             saPaczki = false;
+        else
+            saPaczki = true;
 
 
         if(!saPaczki)
@@ -282,13 +293,41 @@ public class DistList_New_Presenter {
 
     private List<Kurier> CourierREST_GET(){
         RestTemplate restTemplate = new RestTemplate();
-        List<Kurier> couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", List.class);
-        return couriers;
+        String couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Kurier> items = objectMapper.readValue(
+                    couriers,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Kurier.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
+
     private List<Przesylka> PackageREST_GET(){
+
         RestTemplate restTemplate = new RestTemplate();
-        List<Przesylka> packages = restTemplate.getForObject("http://localhost:8080/rest/paczka", List.class);
-        return packages;
+        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Przesylka> items = objectMapper.readValue(
+                    packages,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     private Kurier getSelectedCourier()
