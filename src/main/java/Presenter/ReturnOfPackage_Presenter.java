@@ -1,13 +1,18 @@
 package Presenter;
 
+import Model.Przesylka;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Kacper on 12.01.2019.
@@ -90,9 +95,34 @@ public class ReturnOfPackage_Presenter {
 
     public boolean existInBase(int id)
     {
-        //TO DO
+        RestTemplate restTemplate = new RestTemplate();
+        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
 
-        return true;
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        List<Przesylka> items = new ArrayList<>();
+
+        try {
+                 items = objectMapper.readValue(
+                    packages,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        if (items.size() != 0)
+        {
+            for (Przesylka p : items)
+                if (p.getID() == id)
+                {
+                    return true;
+                }
+        }
+
+
+        return false;
     }
 
 

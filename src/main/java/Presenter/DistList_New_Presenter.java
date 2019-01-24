@@ -175,7 +175,7 @@ public class DistList_New_Presenter {
             przypiszKurierowiListe();
 
             //
-            //wysłać postem wybrany kurier, liste rozwozowa, paczki do zmiany
+            //wysłać do serwera wybranyKurier, listaRozwozowa, paczkiNaLiscieRozwozowej do zmiany
             //
 
 
