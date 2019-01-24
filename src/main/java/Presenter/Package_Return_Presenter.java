@@ -3,6 +3,7 @@ package Presenter;
 import Model.Nadawca;
 import Model.Odbiorca;
 import Model.Przesylka;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,8 +12,11 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Package_Return_Presenter {
 
@@ -35,11 +39,12 @@ public class Package_Return_Presenter {
     public void initialize()
     {
         id = ReturnOfPackage_Presenter.package_id_to_return;
-        nadawca = findSender(id);
-        odbiorca = findRecpient(id);
         paczka  = findPackage(id);
 
-        setContent();
+        nadawca = findSender(id);
+        odbiorca = findRecpient(id);
+
+        //setContent();
     }
 
     @FXML
@@ -64,20 +69,42 @@ public class Package_Return_Presenter {
 
     private Nadawca findSender(int id)
     {
-        //to do
-        return new Nadawca();
+        //return paczka.getNadawca_ID();
+        return null;
     }
 
     private Odbiorca findRecpient(int id)
     {
-        //to do
-        return new Odbiorca();
+        //return paczka.getOdbiorca_ID();
+        return null;
     }
 
     private Przesylka findPackage(int id)
     {
 
-        // to do
+        RestTemplate restTemplate = new RestTemplate();
+        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        List<Przesylka> items = new ArrayList<>();
+
+        try {
+            items = objectMapper.readValue(
+                    packages,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for (Przesylka p: items)
+            if (p.getID() == id)
+            {
+                return p;
+            }
+
         return null;
     }
 
@@ -125,7 +152,7 @@ public class Package_Return_Presenter {
     private void setStatusy()
     {
         //do odkomentowania po implementacji
-        //status_przed.setText(paczka.getStatus_przesylki());
+        status_przed.setText(paczka.getStatus_przesylki());
         status_po.setText("Zwrot");
     }
 
@@ -133,7 +160,7 @@ public class Package_Return_Presenter {
 
     private void zmienStatusPaczki()
     {
-        // to do
+        // to do wyslac na serwer zmodyfikowana przesylke
 
         if(udaloSieZmienic)
         {
@@ -154,7 +181,4 @@ public class Package_Return_Presenter {
         }
 
     }
-
-
-
 }
