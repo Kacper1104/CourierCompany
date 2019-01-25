@@ -3,13 +3,13 @@ package Model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListaPaczek {
+public class PrzesylkaList {
     List<Przesylka> przesylki;
 
-    public ListaPaczek(){
+    public PrzesylkaList(){
         przesylki = new ArrayList<>();
     }
-    public ListaPaczek(List<Przesylka> przesylki) {
+    public PrzesylkaList(List<Przesylka> przesylki) {
         this.przesylki = przesylki;
     }
 
