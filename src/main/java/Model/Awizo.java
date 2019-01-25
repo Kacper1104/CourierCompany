@@ -1,16 +1,15 @@
 package Model;
 
-import java.io.Serializable;
 import java.util.Date;
 
 
 public class Awizo {
     private Integer ID;
     private Date Data_zostawienia;
-    private Przesylka Przesylka_ID;
+    private Integer Przesylka_ID;
 
-    public Awizo(){};
-    public Awizo(Integer ID, Date data_zostawienia, Przesylka przesylka_ID) {
+    //constructors
+    public Awizo(Integer ID, Date data_zostawienia, Integer przesylka_ID) {
         this.ID = ID;
         Data_zostawienia = data_zostawienia;
         Przesylka_ID = przesylka_ID;
@@ -23,10 +22,10 @@ public class Awizo {
     public void setData_zostawienia(Date Data_zostawienia) {
         this.Data_zostawienia = Data_zostawienia;
     }
-    public Przesylka getPrzesylka_ID() {
+    public Integer getPrzesylka_ID() {
         return Przesylka_ID;
     }
-    public void setPrzesylka_ID(Przesylka Przesylka_ID) {
+    public void setPrzesylka_ID(Integer Przesylka_ID) {
         this.Przesylka_ID = Przesylka_ID;
     }
     public void setID(Integer ID) {

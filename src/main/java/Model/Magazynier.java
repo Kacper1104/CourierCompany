@@ -1,20 +1,21 @@
 package Model;
 
 
-import java.util.List;
-
-public class Magazynier {
+public class Magazynier{
     private Integer ID;
     private String Login;
     private String Haslo;
-    private List<Lista_rozwozowa> lista_rozwozowa;
 
-    public Magazynier(Integer ID, String login, String haslo, List<Lista_rozwozowa> lista_rozwozowa) {
+
+    //constructors
+
+
+    public Magazynier(Integer ID, String login, String haslo) {
         this.ID = ID;
         Login = login;
         Haslo = haslo;
-        this.lista_rozwozowa = lista_rozwozowa;
     }
+
 
     //getters & setters
     public Integer getID() {
@@ -34,11 +35,5 @@ public class Magazynier {
     }
     public void setHaslo(String haslo) {
         Haslo = haslo;
-    }
-    public List<Lista_rozwozowa> getLista_rozwozowa() {
-        return lista_rozwozowa;
-    }
-    public void setLista_rozwozowa(List<Lista_rozwozowa> lista_rozwozowa) {
-        this.lista_rozwozowa = lista_rozwozowa;
     }
 }

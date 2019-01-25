@@ -1,8 +1,7 @@
 package Model;
 
-import java.util.List;
 
-public class Odbiorca {
+public class Odbiorca{
     private Integer ID;
     private String Adnotacje;
     private String Imie_I_Nazwisko;
@@ -11,17 +10,17 @@ public class Odbiorca {
     private String Miejscowosc;
     private String Login;
     private String Haslo;
-    private List <Przesylka> przesylka;
 
 
-    public Odbiorca(){};
+    //constructors
+    public Odbiorca() {}
     public Odbiorca(String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc) {
         Imie_I_Nazwisko = imie_I_Nazwisko;
         Adres = adres;
         Kod_Pocztowy = kod_Pocztowy;
         Miejscowosc = miejscowosc;
     }
-    public Odbiorca(Integer ID, String adnotacje, String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo, List<Przesylka> przesylka) {
+    public Odbiorca(Integer ID, String adnotacje, String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo) {
         this.ID = ID;
         Adnotacje = adnotacje;
         Imie_I_Nazwisko = imie_I_Nazwisko;
@@ -30,8 +29,8 @@ public class Odbiorca {
         Miejscowosc = miejscowosc;
         Login = login;
         Haslo = haslo;
-        this.przesylka = przesylka;
     }
+
 
     //getters & setters
     public Integer getID() {
@@ -81,11 +80,5 @@ public class Odbiorca {
     }
     public void setHaslo(String haslo) {
         Haslo = haslo;
-    }
-    public List<Przesylka> getPrzesylka() {
-        return przesylka;
-    }
-    public void setPrzesylka(List<Przesylka> przesylka) {
-        this.przesylka = przesylka;
     }
 }

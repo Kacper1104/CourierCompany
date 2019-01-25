@@ -1,20 +1,19 @@
 package Model;
 
-import java.util.List;
-
 public class Nadawca {
     private Integer ID;
-    private Integer Numer_konta;
+    private String Numer_konta;
     private String Imie_I_Nazwisko;
     private String Adres;
     private String Kod_Pocztowy;
     private String Miejscowosc;
     private String Login;
     private String Haslo;
-    List<Przesylka> przesylka;
 
+
+    //constructors
     public Nadawca(){}
-    public Nadawca(Integer ID, Integer numer_konta, String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo, List<Przesylka> przesylka) {
+    public Nadawca(Integer ID, String numer_konta, String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo) {
         this.ID = ID;
         Numer_konta = numer_konta;
         Imie_I_Nazwisko = imie_I_Nazwisko;
@@ -23,8 +22,8 @@ public class Nadawca {
         Miejscowosc = miejscowosc;
         Login = login;
         Haslo = haslo;
-        this.przesylka = przesylka;
     }
+
 
     //getters & setters
     public Integer getID() {
@@ -33,10 +32,10 @@ public class Nadawca {
     public void setID(Integer ID) {
         this.ID = ID;
     }
-    public Integer getNumer_konta() {
+    public String getNumer_konta() {
         return Numer_konta;
     }
-    public void setNumer_konta(Integer numer_konta) {
+    public void setNumer_konta(String numer_konta) {
         Numer_konta = numer_konta;
     }
     public String getImie_I_Nazwisko() {
@@ -74,11 +73,5 @@ public class Nadawca {
     }
     public void setHaslo(String haslo) {
         Haslo = haslo;
-    }
-    public List<Przesylka> getPrzesylka() {
-        return przesylka;
-    }
-    public void setPrzesylka(List<Przesylka> przesylka) {
-        this.przesylka = przesylka;
     }
 }

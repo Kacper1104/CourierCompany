@@ -1,9 +1,8 @@
 package Model;
 
-import java.io.Serializable;
 import java.util.Date;
 
-public class Przesylka implements Serializable{
+public class Przesylka{
     private Integer ID;
     private String Status_przesylki;
     private String Opcja_dostawy;
@@ -12,13 +11,18 @@ public class Przesylka implements Serializable{
     private boolean Na_liscie_rozwozowej;
     private Integer Proba_dostarczenia;
     private Date Ostatnia_zmiana_statusu;
-    private Lista_rozwozowa Lista_rozwozowa_ID;
-    private Nadawca Nadawca_ID;
-    private Odbiorca Odbiorca_ID;
+    //fk
+    private Integer Lista_rozwozowa_ID;
+    //fk
+    private Integer Nadawca_ID;
+    //fk
+    private Integer Odbiorca_ID;
 
 
-    public Przesylka(){};
-    public Przesylka(Integer ID, String status_przesylki, String opcja_dostawy, double koszt_Do_Zaplaty, Date data_nadania, boolean na_liscie_rozwozowej, Integer proba_dostarczenia, Date ostatnia_zmiana_statusu, Lista_rozwozowa lista_rozwozowa_ID, Nadawca nadawca_ID, Odbiorca odbiorca_ID) {
+    //constructors
+    public Przesylka() {}
+    public Przesylka(Integer ID, String status_przesylki, String opcja_dostawy, double koszt_Do_Zaplaty, Date data_nadania, boolean na_liscie_rozwozowej,
+                     Integer proba_dostarczenia, Date ostatnia_zmiana_statusu, Integer lista_rozwozowa_ID, Integer nadawca_ID, Integer odbiorca_ID) {
         this.ID = ID;
         Status_przesylki = status_przesylki;
         Opcja_dostawy = opcja_dostawy;
@@ -31,8 +35,7 @@ public class Przesylka implements Serializable{
         Nadawca_ID = nadawca_ID;
         Odbiorca_ID = odbiorca_ID;
     }
-
-    public Przesylka(String status_przesylki, String opcja_dostawy, double koszt_Do_Zaplaty, Date data_nadania, Date ostatnia_zmiana_statusu, Odbiorca odbiorca_ID) {
+    public Przesylka(String status_przesylki, String opcja_dostawy, double koszt_Do_Zaplaty, Date data_nadania, Date ostatnia_zmiana_statusu, Integer odbiorca_ID) {
         Status_przesylki = status_przesylki;
         Opcja_dostawy = opcja_dostawy;
         Koszt_Do_Zaplaty = koszt_Do_Zaplaty;
@@ -40,6 +43,7 @@ public class Przesylka implements Serializable{
         Ostatnia_zmiana_statusu = ostatnia_zmiana_statusu;
         Odbiorca_ID = odbiorca_ID;
     }
+
 
     //getters & setters
     public Integer getID() {
@@ -90,22 +94,23 @@ public class Przesylka implements Serializable{
     public void setOstatnia_zmiana_statusu(Date ostatnia_zmiana_statusu) {
         Ostatnia_zmiana_statusu = ostatnia_zmiana_statusu;
     }
-    public Lista_rozwozowa getLista_rozwozowa_ID() {
+    public Integer getLista_rozwozowa_ID() {
         return Lista_rozwozowa_ID;
     }
-    public void setLista_rozwozowa_ID(Lista_rozwozowa lista_rozwozowa_ID) {
+    public void setLista_rozwozowa_ID(Integer lista_rozwozowa_ID) {
         Lista_rozwozowa_ID = lista_rozwozowa_ID;
     }
-    public Nadawca getNadawca_ID() {
+    public Integer getNadawca_ID() {
         return Nadawca_ID;
     }
-    public void setNadawca_ID(Nadawca nadawca_ID) {
+    public void setNadawca_ID(Integer nadawca_ID) {
         Nadawca_ID = nadawca_ID;
     }
-    public Odbiorca getOdbiorca_ID() {
+    public Integer getOdbiorca_ID() {
         return Odbiorca_ID;
     }
-    public void setOdbiorca_ID(Odbiorca odbiorca_ID) {
+    public void setOdbiorca_ID(Integer odbiorca_ID) {
         Odbiorca_ID = odbiorca_ID;
     }
 }
+

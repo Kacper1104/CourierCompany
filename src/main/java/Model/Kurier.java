@@ -1,16 +1,16 @@
 package Model;
 
-import java.io.Serializable;
 
-public class Kurier implements Serializable {
+public class Kurier {
     private Integer ID;
-    private Lista_rozwozowa Lista_rozwozowa_ID;
+    private Integer Lista_rozwozowa_ID;
     private String Login;
     private String Haslo;
     private String Imie_I_Nazwisko;
 
+    //constructors
     public Kurier(){}
-    public Kurier(Integer ID, Lista_rozwozowa lista_rozwozowa_ID, String login, String haslo, String imie_I_Nazwisko) {
+    public Kurier(Integer ID, Integer lista_rozwozowa_ID, String login, String haslo, String imie_I_Nazwisko) {
         this.ID = ID;
         Lista_rozwozowa_ID = lista_rozwozowa_ID;
         Login = login;
@@ -25,10 +25,10 @@ public class Kurier implements Serializable {
     public void setID(Integer ID) {
         this.ID = ID;
     }
-    public Lista_rozwozowa getLista_rozwozowa_ID() {
+    public Integer getLista_rozwozowa_ID() {
         return Lista_rozwozowa_ID;
     }
-    public void setLista_rozwozowa_ID(Lista_rozwozowa lista_rozwozowa_ID) {
+    public void setLista_rozwozowa_ID(Integer lista_rozwozowa_ID) {
         Lista_rozwozowa_ID = lista_rozwozowa_ID;
     }
     public String getLogin() {
