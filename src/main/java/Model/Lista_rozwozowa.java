@@ -7,7 +7,7 @@ public class Lista_rozwozowa {
     private Integer ID;
     private Date Data;
     //fk
-    private Magazynier Magazynier_ID;
+    private Integer Magazynier_ID;
 
 
     //constructors
@@ -37,10 +37,10 @@ public class Lista_rozwozowa {
     public void setData(Date data) {
         Data = data;
     }
-    public Magazynier getMagazynier_ID() {
+    public Integer getMagazynier_ID() {
         return Magazynier_ID;
     }
-    public void setMagazynier_ID(Magazynier magazynier_ID) {
+    public void setMagazynier_ID(Integer magazynier_ID) {
         Magazynier_ID = magazynier_ID;
     }
 }
