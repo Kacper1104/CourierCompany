@@ -73,7 +73,7 @@ public class Package_New_Edit_Presenter {
        LocalDate now_lc = LocalDate.now();
        Date now = new Date(now_lc.getYear(), now_lc.getMonth().getValue(), now_lc.getDayOfMonth());
 
-        Przesylka toReturn = new Przesylka("nadana", getSelectedItem(), koszt, now, now, recipient_id);
+        Przesylka toReturn = new Przesylka("nadana", getSelectedItem(), koszt, now, now, recipient_id.getID());
 
         return toReturn;
     }

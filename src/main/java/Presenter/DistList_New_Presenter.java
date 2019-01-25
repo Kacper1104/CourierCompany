@@ -66,21 +66,22 @@ public class DistList_New_Presenter {
         LocalDate date = LocalDate.now();
         Date dd = new Date(date.getYear(), date.getMonthValue(), date.getDayOfMonth());
 
-        listaRozwozowa = new Lista_rozwozowa(dd,null, wybranyKurier, paczkiNaLiscieRozwozowej);
+        //WPISAC DANE
+        listaRozwozowa = new Lista_rozwozowa();
     }
 
     private void ustawPaczkaListeRozwozowa()
     {
         for (Przesylka p: paczkiNaLiscieRozwozowej)
         {
-            p.setLista_rozwozowa_ID(listaRozwozowa);
+            p.setLista_rozwozowa_ID(listaRozwozowa.getID());
             p.setNa_liscie_rozwozowej(true);
         }
     }
 
     private void przypiszKurierowiListe()
     {
-        getSelectedCourier().setLista_rozwozowa_ID(listaRozwozowa);
+        getSelectedCourier().setLista_rozwozowa_ID(listaRozwozowa.getID());
     }
 
 
