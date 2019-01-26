@@ -15,12 +15,12 @@ public class Lista_rozwozowa {
     }
     public Lista_rozwozowa(Integer ID, Date data, Integer Magazynier_ID) {
         this.ID = ID;
+        this.Magazynier_ID = Magazynier_ID;
         Data = data;
-        Magazynier_ID = Magazynier_ID;
     }
-    public Lista_rozwozowa(Date data, Magazynier Magazynier_ID) {
-        Data = data;
-        Magazynier_ID = Magazynier_ID;
+    public Lista_rozwozowa(Date Data, Integer Magazynier_ID) {
+        this.Data = Data;
+        this.Magazynier_ID = Magazynier_ID;
     }
 
 

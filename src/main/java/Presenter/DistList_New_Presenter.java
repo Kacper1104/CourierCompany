@@ -12,16 +12,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
-import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
-
 import java.io.IOException;
-import java.lang.reflect.Array;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 
@@ -52,13 +47,35 @@ public class DistList_New_Presenter {
 
     @FXML
     public void initialize() throws IOException {
-        setKurierzy();
-        setPaczkiDoRozwiezienia();
+        //setKurierzy();
+        //setPaczkiDoRozwiezienia();
 
+        //SPIKE
+        Date date = createDate(2018, 10, 20);
+        Lista_rozwozowa lista = new Lista_rozwozowa(5, date,2);
+        RestTemplate restTemplate = new RestTemplate();
 
-        do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        try{
+            Lista_rozwozowa result = restTemplate.postForObject("http://localhost:8080/rest/lista_rozwozowa", lista, Lista_rozwozowa.class);
+            System.out.println("ID: "+result.getID()+" Data: "+result.getData().toString()+" Magazynier: "+result.getMagazynier_ID());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
+        //do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        //na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
+
+	private Date createDate(int year, int month, int day){
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month);
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+        calendar.set(Calendar.HOUR, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return calendar.getTime();
+    }
 
 	private void utworzListeRozwozowa()
     {
