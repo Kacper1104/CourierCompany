@@ -174,10 +174,14 @@ public class Package_Return_Presenter {
         Nadawca nowyNadawca = new Nadawca(odbiorca.getImie_I_Nazwisko(), odbiorca.getAdres(), odbiorca.getKod_Pocztowy(), odbiorca.getMiejscowosc(), nadawca.getLogin(), nadawca.getHaslo());
         paczka.setStatus_przesylki("zwrot");
 
-        //wywal z serwera starych nadawcę i odbiorcę
         //trzeba wysłać na serwer nowych nadawcę i odbiorcę, żeby tam im nadać id, a potem zwrócić te id do programu, żeby móc je przypisać paczce
         //wyslać na serwer zmodyfikowaną przesyłke
 
+        nadawca = senderREST_POST(nowyNadawca);
+        odbiorca = recipientREST_POST(nowyOdbiorca);
+
+        paczka.setNadawca_ID(nadawca.getID());
+        paczka.setOdbiorca_ID(odbiorca.getID());
 
 
         //modyfikacja przesylki na serwerze
@@ -208,4 +212,82 @@ public class Package_Return_Presenter {
         }
 
     }
+
+    private Przesylka packageREST_POST(Przesylka przesylka){
+        RestTemplate restTemplate = new RestTemplate();
+
+        try{
+            Przesylka result = restTemplate.postForObject("http://localhost:8080/rest/przesylka", przesylka, Przesylka.class);
+            //System.out.println("Posted package ID: "+result.getID());
+
+            return result;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private List<Przesylka> packageREST_GET(){
+
+        RestTemplate restTemplate = new RestTemplate();
+        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Przesylka> items = objectMapper.readValue(
+                    packages,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Przesylka packageREST_GET(Integer id){
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:8080/rest/przesylka/" + id ;
+
+        try {
+            Przesylka przesylka = restTemplate.getForObject(url, Przesylka.class);
+            //System.out.println("Przesylka id: "+przesylka.getID());
+            return przesylka;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Odbiorca recipientREST_POST(Odbiorca odbiorca){
+        RestTemplate restTemplate = new RestTemplate();
+
+        try{
+            Odbiorca result = restTemplate.postForObject("http://localhost:8080/rest/odbiorca", odbiorca, Odbiorca.class);
+            //System.out.println("Posted package ID: "+result.getID());
+
+            return result;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Nadawca senderREST_POST(Nadawca nadawca){
+        RestTemplate restTemplate = new RestTemplate();
+
+        try{
+            Nadawca result = restTemplate.postForObject("http://localhost:8080/rest/nadawca", nadawca, Nadawca.class);
+            //System.out.println("Posted package ID: "+result.getID());
+
+            return result;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

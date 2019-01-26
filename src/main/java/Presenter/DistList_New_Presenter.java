@@ -50,6 +50,7 @@ public class DistList_New_Presenter {
         setKurierzy();
         setPaczkiDoRozwiezienia();
 
+
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
@@ -69,10 +70,9 @@ public class DistList_New_Presenter {
     {
         wybranyKurier = getSelectedCourier();
         LocalDate date = LocalDate.now();
-        Date dd = new Date(date.getYear(), date.getMonthValue(), date.getDayOfMonth());
+        Date dd = createDate(date.getYear(), date.getMonthValue(), date.getDayOfMonth());
 
-        //WPISAC DANE
-        listaRozwozowa = new Lista_rozwozowa();
+        listaRozwozowa = new Lista_rozwozowa(dd, wybranyKurier.getID());
     }
 
     private void ustawPaczkaListeRozwozowa()
@@ -175,28 +175,24 @@ public class DistList_New_Presenter {
         }
         else
         {
-
             utworzListeRozwozowa();
             //wyslać na serwer, odebrać id
+            listaRozwozowa = distListREST_POST(listaRozwozowa);
+
+
+
             ustawPaczkaListeRozwozowa(); //ustaw nowe id
             przypiszKurierowiListe(); // ustaw nowe id
 
-            //
-            //wysłać do serwera wybranyKurier, listaRozwozowa, paczkiNaLiscieRozwozowej do zmiany
-            //
 
+            courierREST_POST(wybranyKurier);
 
 
             // modyfikacja paczek na serwerze
-            RestTemplate restTemplate = new RestTemplate();
             for (Przesylka p: paczkiNaLiscieRozwozowej)
             {
-                try{
-                    Przesylka result = restTemplate.postForObject("http://localhost:8080/rest/przesylka", p, Przesylka.class);
-                    System.out.println(result.getLista_rozwozowa_ID());
-                }catch(Exception e){
-                    e.printStackTrace();
-                }
+                packageREST_POST(p);
+
             }
 
 

@@ -2,6 +2,7 @@ package Presenter;
 
 import Model.Odbiorca;
 import Model.Przesylka;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -17,6 +18,7 @@ import org.springframework.web.client.RestTemplate;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.regex.Pattern;
@@ -48,6 +50,17 @@ public class Package_New_Edit_Presenter {
 
     }
 
+    private Date createDate(int year, int month, int day){
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month);
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+        calendar.set(Calendar.HOUR, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        return calendar.getTime();
+    }
+
     private Odbiorca newRecipient()
     {
         String imie_i_nazwisko = imie_nazwisko_txt.getText();
@@ -72,7 +85,7 @@ public class Package_New_Edit_Presenter {
         double koszt = Double.parseDouble(koszt_txt.getText());
 
        LocalDate now_lc = LocalDate.now();
-       Date now = new Date(now_lc.getYear(), now_lc.getMonth().getValue(), now_lc.getDayOfMonth());
+       Date now = createDate(now_lc.getYear(), now_lc.getMonth().getValue(), now_lc.getDayOfMonth());
 
         Przesylka toReturn = new Przesylka("nadana", getSelectedItem(), koszt, now, now, recipient_id);
 
@@ -120,10 +133,14 @@ public class Package_New_Edit_Presenter {
             {
                 //wpisz odbiorcę do bazy, pobierz wygenerowane id
                  Odbiorca odbiorca = newRecipient();
+
+                 odbiorca = recipientREST_POST(odbiorca);
+
                 //utwórz paczkę z id odbiorcy
-                newPackage(odbiorca.getID());
-                //to do
+
                 //dodaj do bazy paczke
+
+                packageREST_POST(newPackage(odbiorca.getID()));
 
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -158,5 +175,67 @@ public class Package_New_Edit_Presenter {
         stage.setScene(new Scene(root));
     }
 
+    private Przesylka packageREST_POST(Przesylka przesylka){
+        RestTemplate restTemplate = new RestTemplate();
+
+        try{
+            Przesylka result = restTemplate.postForObject("http://localhost:8080/rest/przesylka", przesylka, Przesylka.class);
+            //System.out.println("Posted package ID: "+result.getID());
+
+            return result;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private List<Przesylka> packageREST_GET(){
+
+        RestTemplate restTemplate = new RestTemplate();
+        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Przesylka> items = objectMapper.readValue(
+                    packages,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Przesylka packageREST_GET(Integer id){
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:8080/rest/przesylka/" + id ;
+
+        try {
+            Przesylka przesylka = restTemplate.getForObject(url, Przesylka.class);
+            //System.out.println("Przesylka id: "+przesylka.getID());
+            return przesylka;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Odbiorca recipientREST_POST(Odbiorca odbiorca){
+        RestTemplate restTemplate = new RestTemplate();
+
+        try{
+            Odbiorca result = restTemplate.postForObject("http://localhost:8080/rest/odbiorca", odbiorca, Odbiorca.class);
+            //System.out.println("Posted package ID: "+result.getID());
+
+            return result;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }
