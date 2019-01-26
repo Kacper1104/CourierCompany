@@ -179,6 +179,16 @@ public class Package_Return_Presenter {
         // wyslać na serwer zmodyfikowaną przesyłke
 
 
+
+        //modyfikacja przesylki na serwerze
+        RestTemplate restTemplate = new RestTemplate();
+        try{
+            Przesylka result = restTemplate.postForObject("http://localhost:8080/rest/przesylka", paczka, Przesylka.class);
+            System.out.println(result.getOdbiorca_ID() + " " + result.getNadawca_ID() + " " + result.getStatus_przesylki());
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+
         if(udaloSieZmienic)
         {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);

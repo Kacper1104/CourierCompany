@@ -12,6 +12,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.time.LocalDate;
@@ -66,14 +67,14 @@ public class Package_New_Edit_Presenter {
         combo.setItems(options);
     }
 
-    private Przesylka newPackage(Odbiorca recipient_id)
+    private Przesylka newPackage(int recipient_id)
     {
         double koszt = Double.parseDouble(koszt_txt.getText());
 
        LocalDate now_lc = LocalDate.now();
        Date now = new Date(now_lc.getYear(), now_lc.getMonth().getValue(), now_lc.getDayOfMonth());
 
-        Przesylka toReturn = new Przesylka("nadana", getSelectedItem(), koszt, now, now, recipient_id.getID());
+        Przesylka toReturn = new Przesylka("nadana", getSelectedItem(), koszt, now, now, recipient_id);
 
         return toReturn;
     }
@@ -117,10 +118,13 @@ public class Package_New_Edit_Presenter {
             }
             else
             {
-                //stworzono nową paczkę
-                newPackage(newRecipient());
+                //wpisz odbiorcę do bazy, pobierz wygenerowane id
+                 Odbiorca odbiorca = newRecipient();
+                //utwórz paczkę z id odbiorcy
+                newPackage(odbiorca.getID());
                 //to do
-                //dodaj do bazy
+                //dodaj do bazy paczke
+
 
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle(null);

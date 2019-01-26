@@ -62,8 +62,8 @@ public class DistList_New_Presenter {
 //            e.printStackTrace();
 //        }
 //
-//        do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-//        na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+        na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
 
 	private Date createDate(int year, int month, int day){
@@ -198,6 +198,18 @@ public class DistList_New_Presenter {
             //
 
 
+
+            // modyfikacja paczek na serwerze
+            RestTemplate restTemplate = new RestTemplate();
+            for (Przesylka p: paczkiNaLiscieRozwozowej)
+            {
+                try{
+                    Przesylka result = restTemplate.postForObject("http://localhost:8080/rest/przesylka", p, Przesylka.class);
+                    System.out.println(result.getLista_rozwozowa_ID());
+                }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
 
 
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
