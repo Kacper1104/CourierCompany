@@ -176,7 +176,7 @@ public class Package_Return_Presenter {
 
         //wywal z serwera starych nadawcę i odbiorcę
         //trzeba wysłać na serwer nowych nadawcę i odbiorcę, żeby tam im nadać id, a potem zwrócić te id do programu, żeby móc je przypisać paczce
-        // wyslać na serwer zmodyfikowaną przesyłke
+        //wyslać na serwer zmodyfikowaną przesyłke
 
 
 

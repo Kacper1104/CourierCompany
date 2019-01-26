@@ -50,18 +50,6 @@ public class DistList_New_Presenter {
         setKurierzy();
         setPaczkiDoRozwiezienia();
 
-        //SPIKE
-//        Date date = createDate(2018, 10, 20);
-//        Lista_rozwozowa lista = new Lista_rozwozowa(5, date,2);
-//        RestTemplate restTemplate = new RestTemplate();
-//
-//        try{
-//            Lista_rozwozowa result = restTemplate.postForObject("http://localhost:8080/rest/lista_rozwozowa", lista, Lista_rozwozowa.class);
-//            System.out.println("ID: "+result.getID()+" Data: "+result.getData().toString()+" Magazynier: "+result.getMagazynier_ID());
-//        }catch(Exception e){
-//            e.printStackTrace();
-//        }
-//
         do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}

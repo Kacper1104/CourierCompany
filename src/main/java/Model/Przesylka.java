@@ -43,6 +43,19 @@ public class Przesylka{
         Ostatnia_zmiana_statusu = ostatnia_zmiana_statusu;
         Odbiorca_ID = odbiorca_ID;
     }
+    public Przesylka(String status_przesylki, String opcja_dostawy, double koszt_Do_Zaplaty, Date data_nadania, boolean na_liscie_rozwozowej,
+                     Integer proba_dostarczenia, Date ostatnia_zmiana_statusu, Integer lista_rozwozowa_ID, Integer nadawca_ID, Integer odbiorca_ID) {
+        Status_przesylki = status_przesylki;
+        Opcja_dostawy = opcja_dostawy;
+        Koszt_Do_Zaplaty = koszt_Do_Zaplaty;
+        Data_nadania = data_nadania;
+        Na_liscie_rozwozowej = na_liscie_rozwozowej;
+        Proba_dostarczenia = proba_dostarczenia;
+        Ostatnia_zmiana_statusu = ostatnia_zmiana_statusu;
+        Lista_rozwozowa_ID = lista_rozwozowa_ID;
+        Nadawca_ID = nadawca_ID;
+        Odbiorca_ID = odbiorca_ID;
+    }
 
 
     //getters & setters
