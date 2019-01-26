@@ -41,10 +41,11 @@ public class Package_Return_Presenter {
         id = ReturnOfPackage_Presenter.package_id_to_return;
         paczka  = findPackage(id);
 
+
         nadawca = findSender(id);
         odbiorca = findRecpient(id);
 
-        //setContent();
+        setContent();
     }
 
     @FXML
@@ -69,13 +70,35 @@ public class Package_Return_Presenter {
 
     private Nadawca findSender(int id)
     {
-        //return paczka.getNadawca_ID();
+        RestTemplate restTemplate = new RestTemplate();
+        String nad = restTemplate.getForObject("http://localhost:8080/rest/nadawca/" + id, String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            Nadawca toReturn = objectMapper.readValue(nad, Nadawca.class);
+            return toReturn;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
     private Odbiorca findRecpient(int id)
     {
-        //return paczka.getOdbiorca_ID();
+
+        RestTemplate restTemplate = new RestTemplate();
+        String odb = restTemplate.getForObject("http://localhost:8080/rest/odbiorca/" + id, String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            Odbiorca toReturn = objectMapper.readValue(odb, Odbiorca.class);
+            return toReturn;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
@@ -83,28 +106,16 @@ public class Package_Return_Presenter {
     {
 
         RestTemplate restTemplate = new RestTemplate();
-        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
+        String prze = restTemplate.getForObject("http://localhost:8080/rest/przesylka/" + id, String.class);
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        List<Przesylka> items = new ArrayList<>();
-
         try {
-            items = objectMapper.readValue(
-                    packages,
-                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
-
-
+            Przesylka toReturn = objectMapper.readValue(prze, Przesylka.class);
+            return toReturn;
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        for (Przesylka p: items)
-            if (p.getID() == id)
-            {
-                return p;
-            }
-
         return null;
     }
 
@@ -143,15 +154,14 @@ public class Package_Return_Presenter {
 
     private void setNadawcaPo()
     {
-        imie_i_naz_od_po.setText(odbiorca.getImie_I_Nazwisko());
-        ulica_od_po.setText(odbiorca.getAdres());
-        kod_odb_po.setText(odbiorca.getKod_Pocztowy());
-        miejscowosc_od_po.setText(odbiorca.getMiejscowosc());
+        imie_i_naz_nad_po.setText(odbiorca.getImie_I_Nazwisko());
+        ulica_nad_po.setText(odbiorca.getAdres());
+        kod_nad_po.setText(odbiorca.getKod_Pocztowy());
+        miejscowosc_nad_po.setText(odbiorca.getMiejscowosc());
     }
 
     private void setStatusy()
     {
-        //do odkomentowania po implementacji
         status_przed.setText(paczka.getStatus_przesylki());
         status_po.setText("Zwrot");
     }
@@ -160,7 +170,14 @@ public class Package_Return_Presenter {
 
     private void zmienStatusPaczki()
     {
-        // to do wyslac na serwer zmodyfikowana przesylke
+        Odbiorca nowyOdbiorca = new Odbiorca(nadawca.getImie_I_Nazwisko(), nadawca.getAdres(), nadawca.getKod_Pocztowy(), nadawca.getMiejscowosc(), nadawca.getLogin(), nadawca.getHaslo());
+        Nadawca nowyNadawca = new Nadawca(odbiorca.getImie_I_Nazwisko(), odbiorca.getAdres(), odbiorca.getKod_Pocztowy(), odbiorca.getMiejscowosc(), nadawca.getLogin(), nadawca.getHaslo());
+        paczka.setStatus_przesylki("zwrot");
+
+        //wywal z serwera starych nadawcę i odbiorcę
+        //trzeba wysłać na serwer nowych nadawcę i odbiorcę, żeby tam im nadać id, a potem zwrócić te id do programu, żeby móc je przypisać paczce
+        // wyslać na serwer zmodyfikowaną przesyłke
+
 
         if(udaloSieZmienic)
         {

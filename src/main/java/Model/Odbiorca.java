@@ -1,6 +1,8 @@
 package Model;
 
 
+import sun.rmi.runtime.Log;
+
 public class Odbiorca{
     private Integer ID;
     private String Adnotacje;
@@ -19,6 +21,15 @@ public class Odbiorca{
         Adres = adres;
         Kod_Pocztowy = kod_Pocztowy;
         Miejscowosc = miejscowosc;
+    }
+
+    public Odbiorca(String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo) {
+        Imie_I_Nazwisko = imie_I_Nazwisko;
+        Adres = adres;
+        Kod_Pocztowy = kod_Pocztowy;
+        Miejscowosc = miejscowosc;
+        Login = login;
+        Haslo = haslo;
     }
     public Odbiorca(Integer ID, String adnotacje, String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo) {
         this.ID = ID;

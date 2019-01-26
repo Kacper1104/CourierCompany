@@ -24,6 +24,22 @@ public class Nadawca {
         Haslo = haslo;
     }
 
+    public Nadawca(String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc, String login, String haslo) {
+        Imie_I_Nazwisko = imie_I_Nazwisko;
+        Adres = adres;
+        Kod_Pocztowy = kod_Pocztowy;
+        Miejscowosc = miejscowosc;
+        Login = login;
+        Haslo = haslo;
+    }
+
+    public Nadawca(String imie_I_Nazwisko, String adres, String kod_Pocztowy, String miejscowosc) {
+        Imie_I_Nazwisko = imie_I_Nazwisko;
+        Adres = adres;
+        Kod_Pocztowy = kod_Pocztowy;
+        Miejscowosc = miejscowosc;
+    }
+
 
     //getters & setters
     public Integer getID() {
