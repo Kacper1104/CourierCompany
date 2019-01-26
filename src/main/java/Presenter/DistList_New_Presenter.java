@@ -47,23 +47,23 @@ public class DistList_New_Presenter {
 
     @FXML
     public void initialize() throws IOException {
-        //setKurierzy();
-        //setPaczkiDoRozwiezienia();
+        setKurierzy();
+        setPaczkiDoRozwiezienia();
 
         //SPIKE
-        Date date = createDate(2018, 10, 20);
-        Lista_rozwozowa lista = new Lista_rozwozowa(5, date,2);
-        RestTemplate restTemplate = new RestTemplate();
-
-        try{
-            Lista_rozwozowa result = restTemplate.postForObject("http://localhost:8080/rest/lista_rozwozowa", lista, Lista_rozwozowa.class);
-            System.out.println("ID: "+result.getID()+" Data: "+result.getData().toString()+" Magazynier: "+result.getMagazynier_ID());
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
-        //do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
-        //na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+//        Date date = createDate(2018, 10, 20);
+//        Lista_rozwozowa lista = new Lista_rozwozowa(5, date,2);
+//        RestTemplate restTemplate = new RestTemplate();
+//
+//        try{
+//            Lista_rozwozowa result = restTemplate.postForObject("http://localhost:8080/rest/lista_rozwozowa", lista, Lista_rozwozowa.class);
+//            System.out.println("ID: "+result.getID()+" Data: "+result.getData().toString()+" Magazynier: "+result.getMagazynier_ID());
+//        }catch(Exception e){
+//            e.printStackTrace();
+//        }
+//
+//        do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
+//        na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
 
 	private Date createDate(int year, int month, int day){
@@ -189,8 +189,9 @@ public class DistList_New_Presenter {
         {
 
             utworzListeRozwozowa();
-            ustawPaczkaListeRozwozowa();
-            przypiszKurierowiListe();
+            //wyslać na serwer, odebrać id
+            ustawPaczkaListeRozwozowa(); //ustaw nowe id
+            przypiszKurierowiListe(); // ustaw nowe id
 
             //
             //wysłać do serwera wybranyKurier, listaRozwozowa, paczkiNaLiscieRozwozowej do zmiany
@@ -219,12 +220,17 @@ public class DistList_New_Presenter {
     }
 
     private void listOfCourier() throws IOException {
-        listaKurierow=CourierREST_GET();
-        for(Kurier iterator: listaKurierow){
-            if(iterator.getLista_rozwozowa_ID() != null){
-                listaKurierow.remove(iterator);
+        listaKurierow= CourierREST_GET();
+
+        List<Kurier> cleanList = new ArrayList<>();
+
+        for(int i =0; i< listaKurierow.size(); i++){
+            if(listaKurierow.get(i).getLista_rozwozowa_ID() == null){
+                cleanList.add(listaKurierow.get(i));
             }
         }
+        listaKurierow = cleanList;
+
         if(listaKurierow.isEmpty())
             saKurierzy = false;
         else
@@ -259,12 +265,15 @@ public class DistList_New_Presenter {
 
         listaPaczekDoRozwiezienia = PackageREST_GET();
 
+        List<Przesylka> cleanList = new ArrayList<>();
+
         for(Przesylka  iterator: listaPaczekDoRozwiezienia){
-            if(iterator.getLista_rozwozowa_ID() != null){
-                listaPaczekDoRozwiezienia.remove(iterator);
+            if(iterator.getLista_rozwozowa_ID() == null){
+                cleanList.add(iterator);
             }
         }
 
+        listaPaczekDoRozwiezienia = cleanList;
 
         if(listaPaczekDoRozwiezienia.isEmpty())
             saPaczki = false;
