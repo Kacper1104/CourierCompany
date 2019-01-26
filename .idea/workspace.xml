@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="955863df-15e2-49e2-8929-a26a7b40d9c7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CourierCompany.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CourierCompany.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/AwizoList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/KurierList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Lista_rozwozowa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Lista_rozwozowa.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Lista_rozwozowaList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PrzesylkaList.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Presenter/DistList_New_Presenter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Presenter/DistList_New_Presenter.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,12 +32,49 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+            <state relative-caret-position="235">
+              <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#getSelectedCourier#0;class#DistList_New_Presenter#0" />
+                <element signature="e#9302#9303#0" expanded="true" />
+                <element signature="e#9416#9417#0" expanded="true" />
+                <element signature="method#packageREST_POST#0;class#DistList_New_Presenter#0" />
+                <element signature="e#10200#10436#0" />
+                <element signature="e#10454#10498#0" />
+                <element signature="method#packageREST_GET#0;class#DistList_New_Presenter#0" />
+                <element signature="e#10808#11042#0" />
+                <element signature="e#11065#11109#0" />
+                <element signature="method#packageREST_GET#1;class#DistList_New_Presenter#0" />
+                <element signature="e#11326#11519#0" />
+                <element signature="e#11540#11584#0" />
+                <element signature="method#courierREST_POST#0;class#DistList_New_Presenter#0" />
+                <element signature="e#11141#11181#0" />
+                <element signature="e#11313#11358#0" />
+                <element signature="method#courierREST_GET#0;class#DistList_New_Presenter#0" />
+                <element signature="e#11286#11514#0" />
+                <element signature="e#11537#11581#0" />
+                <element signature="method#courierREST_GET#1;class#DistList_New_Presenter#0" />
+                <element signature="e#11743#11771#0" />
+                <element signature="e#11785#11829#0" />
+                <element signature="method#distListREST_POST#0;class#DistList_New_Presenter#0" />
+                <element signature="e#12606#12758#0" />
+                <element signature="e#12889#12933#0" />
+                <element signature="e#12975#13577#0" />
+                <element signature="e#13255#13483#0" />
+                <element signature="e#13506#13550#0" />
+                <element signature="e#13608#13983#0" />
+                <element signature="e#13794#13906#0" />
+                <element signature="e#13925#13969#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Model/Przesylka.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -123,6 +154,17 @@
       </MavenImportingSettings>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="CourierCompany" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
@@ -134,7 +176,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +243,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -209,7 +251,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://D:/Desktop/STUDIA/Projektowanie Oprogramowania/Lab/Implementacja/CourierCompany/src/main/java/Model/Przesylka.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548487923736" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548514086577" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
@@ -282,6 +324,7 @@
       <workItem from="1548434617118" duration="5123000" />
       <workItem from="1548487976422" duration="45000" />
       <workItem from="1548488062005" duration="4917000" />
+      <workItem from="1548503756599" duration="6601000" />
     </task>
     <task id="LOCAL-00001" summary="added service buttons">
       <created>1548185632591</created>
@@ -322,13 +365,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30689000" />
+    <option name="totallyTimeSpent" value="37290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21641791" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2185501" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -338,7 +381,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.26218852" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.26218852" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39869988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -362,7 +405,7 @@
       <window_info anchor="right" id="Database" order="7" weight="0.12526652" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
-      <window_info anchor="right" id="Maven" order="10" />
+      <window_info anchor="right" id="Maven" order="10" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -392,12 +435,12 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Recipient.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Model/Package.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/View/View.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1300">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
         </state>
       </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.4.RELEASE/spring-web-5.1.4.RELEASE.jar!/org/springframework/web/client/RestTemplate.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -555,19 +598,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Przesylka.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="34" column="32" selection-start-line="34" selection-start-column="32" selection-end-line="34" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/AwizoList.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Model/KurierList.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/AwizoList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/KurierList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/ReturnOfPackage_Presenter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -584,13 +616,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
         </state>
       </provider>
     </entry>
@@ -615,13 +640,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="38" column="57" selection-start-line="38" selection-start-column="57" selection-end-line="38" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/REST.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Model/Przesylka.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="3" selection-start-line="26" selection-start-column="3" selection-end-line="26" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Presenter/DistList_New_Presenter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="62" column="9" lean-forward="true" selection-start-line="62" selection-start-column="9" selection-end-line="62" selection-end-column="9" />
+        <state relative-caret-position="235">
+          <caret line="345" column="4" selection-start-line="345" selection-start-column="4" selection-end-line="345" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#getSelectedCourier#0;class#DistList_New_Presenter#0" />
+            <element signature="e#9302#9303#0" expanded="true" />
+            <element signature="e#9416#9417#0" expanded="true" />
+            <element signature="method#packageREST_POST#0;class#DistList_New_Presenter#0" />
+            <element signature="e#10200#10436#0" />
+            <element signature="e#10454#10498#0" />
+            <element signature="method#packageREST_GET#0;class#DistList_New_Presenter#0" />
+            <element signature="e#10808#11042#0" />
+            <element signature="e#11065#11109#0" />
+            <element signature="method#packageREST_GET#1;class#DistList_New_Presenter#0" />
+            <element signature="e#11326#11519#0" />
+            <element signature="e#11540#11584#0" />
+            <element signature="method#courierREST_POST#0;class#DistList_New_Presenter#0" />
+            <element signature="e#11141#11181#0" />
+            <element signature="e#11313#11358#0" />
+            <element signature="method#courierREST_GET#0;class#DistList_New_Presenter#0" />
+            <element signature="e#11286#11514#0" />
+            <element signature="e#11537#11581#0" />
+            <element signature="method#courierREST_GET#1;class#DistList_New_Presenter#0" />
+            <element signature="e#11743#11771#0" />
+            <element signature="e#11785#11829#0" />
+            <element signature="method#distListREST_POST#0;class#DistList_New_Presenter#0" />
+            <element signature="e#12606#12758#0" />
+            <element signature="e#12889#12933#0" />
+            <element signature="e#12975#13577#0" />
+            <element signature="e#13255#13483#0" />
+            <element signature="e#13506#13550#0" />
+            <element signature="e#13608#13983#0" />
+            <element signature="e#13794#13906#0" />
+            <element signature="e#13925#13969#0" />
           </folding>
         </state>
       </provider>

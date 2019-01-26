@@ -49,19 +49,8 @@ public class DistList_New_Presenter {
     public void initialize() throws IOException {
         //setKurierzy();
         //setPaczkiDoRozwiezienia();
-
-        //SPIKE
-        Date date = createDate(2018, 10, 20);
-        Lista_rozwozowa lista = new Lista_rozwozowa(5, date,2);
-        RestTemplate restTemplate = new RestTemplate();
-
-        try{
-            Lista_rozwozowa result = restTemplate.postForObject("http://localhost:8080/rest/lista_rozwozowa", lista, Lista_rozwozowa.class);
-            System.out.println("ID: "+result.getID()+" Data: "+result.getData().toString()+" Magazynier: "+result.getMagazynier_ID());
-        }catch(Exception e){
-            e.printStackTrace();
-        }
-
+        Przesylka p = new Przesylka(1, "Stat", "Opc", 5.20, createDate(2018, 11, 31), false, 2, createDate(2019, 0, 1), 2, 3, 4);
+        System.out.println("POST successful for ID: "+packageREST_POST(p).getID());
         //do_rozwiezienia_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         //na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
@@ -219,7 +208,7 @@ public class DistList_New_Presenter {
     }
 
     private void listOfCourier() throws IOException {
-        listaKurierow=CourierREST_GET();
+        listaKurierow=courierREST_GET();
         for(Kurier iterator: listaKurierow){
             if(iterator.getLista_rozwozowa_ID() != null){
                 listaKurierow.remove(iterator);
@@ -257,7 +246,7 @@ public class DistList_New_Presenter {
 
     private void listOfPackages() throws IOException {
 
-        listaPaczekDoRozwiezienia = PackageREST_GET();
+        listaPaczekDoRozwiezienia = packageREST_GET();
 
         for(Przesylka  iterator: listaPaczekDoRozwiezienia){
             if(iterator.getLista_rozwozowa_ID() != null){
@@ -309,45 +298,6 @@ public class DistList_New_Presenter {
         do_rozwiezienia_listView.setItems(items);
     }
 
-    private List<Kurier> CourierREST_GET(){
-        RestTemplate restTemplate = new RestTemplate();
-        String couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", String.class);
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        try {
-            List<Kurier> items = objectMapper.readValue(
-                    couriers,
-                    objectMapper.getTypeFactory().constructParametricType(List.class, Kurier.class));
-
-            return items;
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    private List<Przesylka> PackageREST_GET(){
-
-        RestTemplate restTemplate = new RestTemplate();
-        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
-
-        ObjectMapper objectMapper = new ObjectMapper();
-
-        try {
-            List<Przesylka> items = objectMapper.readValue(
-                    packages,
-                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
-
-            return items;
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
     private Kurier getSelectedCourier()
     {
         Kurier toReturn = null;
@@ -375,5 +325,149 @@ public class DistList_New_Presenter {
     }
 
 
+    //REST
+
+    //Przesylka
+
+    private Przesylka packageREST_POST(Przesylka przesylka){
+        RestTemplate restTemplate = new RestTemplate();
+
+        try{
+            Przesylka result = restTemplate.postForObject("http://localhost:8080/rest/przesylka", przesylka, Przesylka.class);
+            //System.out.println("Posted package ID: "+result.getID());
+
+            return result;
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private List<Przesylka> packageREST_GET(){
+
+        RestTemplate restTemplate = new RestTemplate();
+        String packages = restTemplate.getForObject("http://localhost:8080/rest/przesylka", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Przesylka> items = objectMapper.readValue(
+                    packages,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Przesylka.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Przesylka packageREST_GET(Integer id){
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:8080/rest/przesylka/" + id ;
+
+        try {
+            Przesylka przesylka = restTemplate.getForObject(url, Przesylka.class);
+            //System.out.println("Przesylka id: "+przesylka.getID());
+            return przesylka;
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //Kurier
+
+    private Kurier courierREST_POST(Kurier kurier){
+        RestTemplate restTemplate = new RestTemplate();
+        try{
+            Kurier result = restTemplate.postForObject("http://localhost:8080/rest/kurier", kurier, Kurier.class);
+            //System.out.println("Posted courier ID: "+result.getID());
+
+            return result;
+        } catch(Exception e){
+            e. printStackTrace();
+        }
+        return null;
+    }
+
+    private List<Kurier> courierREST_GET(){
+        RestTemplate restTemplate = new RestTemplate();
+        String couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Kurier> items = objectMapper.readValue(
+                    couriers,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Kurier.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Kurier courierREST_GET(Integer id){
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:8080/rest/kurier/" + id ;
+        try{
+            Kurier result = restTemplate.getForObject(url, Kurier.class);
+            return result;
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    //Lista rozwozowa
+
+    private Lista_rozwozowa distListREST_POST(Lista_rozwozowa lista){
+        RestTemplate restTemplate = new RestTemplate();
+        try {
+            Lista_rozwozowa result = restTemplate.postForObject("http://localhost:8080/rest/lista_rozwozowa", lista, Lista_rozwozowa.class);
+            System.out.println("Posted dist list ID: "+result.getID());
+
+            return result;
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private List<Lista_rozwozowa> distListREST_GET(){
+        RestTemplate restTemplate = new RestTemplate();
+        String lists = restTemplate.getForObject("http://localhost:8080/rest/lista_rozwozowa", String.class);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        try {
+            List<Lista_rozwozowa> items = objectMapper.readValue(
+                    lists,
+                    objectMapper.getTypeFactory().constructParametricType(List.class, Lista_rozwozowa.class));
+
+            return items;
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    private Lista_rozwozowa distListREST_GET(Integer id){
+        RestTemplate restTemplate = new RestTemplate();
+        String url = "http://localhost:8080/rest/lista_rozwozowa/" + id ;
+        try{
+            Lista_rozwozowa result = restTemplate.getForObject(url, Lista_rozwozowa.class);
+            return result;
+        } catch(Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
 }
