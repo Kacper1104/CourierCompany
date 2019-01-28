@@ -18,7 +18,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 /**
- * Created by Kacper on 12.01.2019.
+ * Prezenter dla głównego widoku
  */
 public class View_Presenter extends Application {
 
@@ -30,6 +30,10 @@ public class View_Presenter extends Application {
     ImageView koerta_imageView;
 
 
+    /**
+     * obsługa kliknięcia wprowadzania przesyłki do systemu
+     * @throws IOException error
+     */
     @FXML
     public void wprowadzPrzesylkeDoSystemuClicked() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/Package_NewEdit.fxml"));
@@ -37,6 +41,10 @@ public class View_Presenter extends Application {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * obsługa kliknięcia tworzenia listy rozwozowej
+     * @throws IOException error
+     */
     @FXML
     public void utworzListeRozwozowaClicked() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/DistList_New.fxml"));
@@ -44,6 +52,10 @@ public class View_Presenter extends Application {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * obsługa kliknięcia nadania przesyłki zwrotnej
+     * @throws IOException error
+     */
     @FXML
     public void nadajPrzesylkeZwrotnaClicked() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/ReturnOfPackage/ID_Choice.fxml"));
@@ -52,21 +64,25 @@ public class View_Presenter extends Application {
     }
 
 
+    /**
+     * metoda uruchomieniowa widoku
+     * @param primaryStage scena
+     * @throws Exception error
+     */
     @Override
     public void start(Stage primaryStage) throws Exception {
-        //Parent root = FXMLLoader.load(getClass().getResource("View.fxml"));
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
         primaryStage.setTitle("Aplikacja kurierska");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
 
-  //      Image image = new Image("file:src/koperta.png");
-//        koerta_imageView.setImage(image);
-//          D:\Desktop\STUDIA\Projektowanie Oprogramowania\Lab\Implementacja\CourierCompany\src
 
     }
 
-
+    /**
+     * main
+     * @param args argumenty uruchomieniowe
+     */
     public static void main(String[] args) {
         launch(args);
     }

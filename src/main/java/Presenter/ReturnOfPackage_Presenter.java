@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Kacper on 12.01.2019.
+ * Prezenter dla zwrotu paczki do nadawcy
  */
 public class ReturnOfPackage_Presenter {
 
@@ -26,12 +26,13 @@ public class ReturnOfPackage_Presenter {
     TextField identyfikator_txt;
 
 
-
-
     boolean okId = false;
     static int package_id_to_return;
 
-
+    /**
+     * Obsługa kliknięcia OK
+     * @throws IOException error
+     */
     @FXML
     public void onClickWybierz() throws IOException {
 
@@ -54,6 +55,10 @@ public class ReturnOfPackage_Presenter {
         }
     }
 
+    /**
+     * Bosługa kliknięcia Powrót
+     * @throws IOException error
+     */
     @FXML
     private void onClickPowrot() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
@@ -61,6 +66,9 @@ public class ReturnOfPackage_Presenter {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * Wyświetlenie komunikatu o nie znalezieniu identyfikatora
+     */
     private void showAlert()
     {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
@@ -71,6 +79,11 @@ public class ReturnOfPackage_Presenter {
         alert.showAndWait();
     }
 
+    /**
+     * Metoda parsująca String pobrany z okienka, do inta
+     * @param id String porany od użytkownika
+     * @return sparsowany String na inta
+     */
     public int checkId(String id)
     {
         int toReturn;
@@ -93,6 +106,11 @@ public class ReturnOfPackage_Presenter {
         return -1;
     }
 
+    /**
+     * Metoda sprawdzająca, czy podany identufikator istnieje w bazie
+     * @param id identyfikator
+     * @return odpoiweź czy istnieje
+     */
     public boolean existInBase(int id)
     {
         RestTemplate restTemplate = new RestTemplate();

@@ -18,6 +18,9 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Prezenter obsługujący zwrot paczki
+ */
 public class Package_Return_Presenter {
 
 
@@ -35,6 +38,9 @@ public class Package_Return_Presenter {
             miejscowosc_od_przed, imie_i_naz_od_po, ulica_od_po, kod_odb_po, miejscowosc_od_po, status_przed, status_po;
 
 
+    /**
+     * metoda inicjalizująca
+     */
     @FXML
     public void initialize()
     {
@@ -48,6 +54,10 @@ public class Package_Return_Presenter {
         setContent();
     }
 
+    /**
+     * obsługa guzika OK
+     * @throws IOException error
+     */
     @FXML
     private void onClickOkButton() throws IOException {
 
@@ -58,6 +68,10 @@ public class Package_Return_Presenter {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * obsługa guzika Anuluj
+     * @throws IOException error
+     */
     @FXML
     private void onClickAnulujButton() throws IOException {
 
@@ -67,7 +81,11 @@ public class Package_Return_Presenter {
     }
 
 
-
+    /**
+     * znajdowanie nadawcy wg id
+     * @param id identyfikator
+     * @return nadawca
+     */
     private Nadawca findSender(int id)
     {
         RestTemplate restTemplate = new RestTemplate();
@@ -85,6 +103,11 @@ public class Package_Return_Presenter {
         return null;
     }
 
+    /**
+     * snajdowanie odbiorcy wg id
+     * @param id identyfikator
+     * @return odbiorca
+     */
     private Odbiorca findRecpient(int id)
     {
 
@@ -102,6 +125,11 @@ public class Package_Return_Presenter {
         return null;
     }
 
+    /**
+     * znajdowanie paczki wg id
+     * @param id identyfikator
+     * @return przesyłka
+     */
     private Przesylka findPackage(int id)
     {
 
@@ -119,6 +147,9 @@ public class Package_Return_Presenter {
         return null;
     }
 
+    /**
+     * ustawianie kontentu na ekran
+     */
     private void setContent()
     {
         setOdbiorcaPrzed();
@@ -128,6 +159,9 @@ public class Package_Return_Presenter {
         setStatusy();
     }
 
+    /**
+     * ustawniwanie na ekran odbiorcy przed zmianą
+     */
     private void setOdbiorcaPrzed()
     {
         imie_i_naz_od_przed.setText(odbiorca.getImie_I_Nazwisko());
@@ -136,6 +170,9 @@ public class Package_Return_Presenter {
         miejscowosc_od_przed.setText(odbiorca.getMiejscowosc());
     }
 
+    /**
+     * ustawniwanie na ekran nadawcy przed zmianą
+     */
     private void setNadawcaPrzed()
     {
         imie_i_naz_nad_przed.setText(nadawca.getImie_I_Nazwisko());
@@ -144,6 +181,9 @@ public class Package_Return_Presenter {
         miejscowosc_nad_przed.setText(nadawca.getMiejscowosc());
     }
 
+    /**
+     * ustawniwanie na ekran odbiorcy po zmianie
+     */
     private void setOdbiorcaPo()
     {
         imie_i_naz_od_po.setText(nadawca.getImie_I_Nazwisko());
@@ -152,6 +192,9 @@ public class Package_Return_Presenter {
         miejscowosc_od_po.setText(nadawca.getMiejscowosc());
     }
 
+    /**
+     * ustawniwanie na ekran nadawcy po zmianie
+     */
     private void setNadawcaPo()
     {
         imie_i_naz_nad_po.setText(odbiorca.getImie_I_Nazwisko());
@@ -160,6 +203,9 @@ public class Package_Return_Presenter {
         miejscowosc_nad_po.setText(odbiorca.getMiejscowosc());
     }
 
+    /**
+     * ustawianie na ekranie statusó paczki
+     */
     private void setStatusy()
     {
         status_przed.setText(paczka.getStatus_przesylki());
@@ -168,6 +214,9 @@ public class Package_Return_Presenter {
 
     private boolean udaloSieZmienic = true;
 
+    /**
+     * zmiana statusu przesyłki
+     */
     private void zmienStatusPaczki()
     {
         Odbiorca nowyOdbiorca = new Odbiorca(nadawca.getImie_I_Nazwisko(), nadawca.getAdres(), nadawca.getKod_Pocztowy(), nadawca.getMiejscowosc(), nadawca.getLogin(), nadawca.getHaslo());
@@ -262,6 +311,11 @@ public class Package_Return_Presenter {
         return null;
     }
 
+    /**
+     * wysyłąnei na serwer odbiorcy do zmiany
+     * @param odbiorca odbiorca do zmiany
+     * @return odpowiedź serwera
+     */
     private Odbiorca recipientREST_POST(Odbiorca odbiorca){
         RestTemplate restTemplate = new RestTemplate();
 
@@ -276,6 +330,11 @@ public class Package_Return_Presenter {
         return null;
     }
 
+    /**
+     * wysyłąnei na serwer nadawcy do zmiany
+     * @param nadawca nadawca do zmiany
+     * @return odpowiedź serwera
+     */
     private Nadawca senderREST_POST(Nadawca nadawca){
         RestTemplate restTemplate = new RestTemplate();
 

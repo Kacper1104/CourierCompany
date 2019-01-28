@@ -21,7 +21,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Created by Kacper on 12.01.2019.
+ * Prezenter dla utworzenia listy rozwozowej
  */
 public class DistList_New_Presenter {
 
@@ -45,6 +45,10 @@ public class DistList_New_Presenter {
 
     private Kurier wybranyKurier;
 
+    /**
+     * metoda inicjalizująca, ustawia content na ekranie
+     * @throws IOException
+     */
     @FXML
     public void initialize() throws IOException {
         setKurierzy();
@@ -55,6 +59,13 @@ public class DistList_New_Presenter {
         na_liscie_listView.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
 	}
 
+    /**
+     * metoda do konstruowania daty
+     * @param year rok
+     * @param month miesiąc
+     * @param day dzień
+     * @return data
+     */
 	private Date createDate(int year, int month, int day){
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
@@ -66,6 +77,9 @@ public class DistList_New_Presenter {
         return calendar.getTime();
     }
 
+    /**
+     * Metoda tworząca nową listę rozwozową
+     */
 	private void utworzListeRozwozowa()
     {
         wybranyKurier = getSelectedCourier();
@@ -75,6 +89,9 @@ public class DistList_New_Presenter {
         listaRozwozowa = new Lista_rozwozowa(dd, wybranyKurier.getID());
     }
 
+    /**
+     * metoda ma za zadanie ustawienie w przesyłkach listy rozwozowej
+     */
     private void ustawPaczkaListeRozwozowa()
     {
         for (Przesylka p: paczkiNaLiscieRozwozowej)
@@ -84,12 +101,17 @@ public class DistList_New_Presenter {
         }
     }
 
+    /**
+     * metoda przypisująca kurierowi listę rozwozową
+     */
     private void przypiszKurierowiListe()
     {
         getSelectedCourier().setLista_rozwozowa_ID(listaRozwozowa.getID());
     }
 
-
+    /**
+     * metoda obsługująca kliknięcie guzika w lewo
+     */
     @FXML
     private void onButtonLeftClicked()
     {
@@ -116,6 +138,9 @@ public class DistList_New_Presenter {
 
     }
 
+    /**
+     * metoda ustawiająca listę przesyłek do wyświetlenia na ekranie
+     */
     private void setNaLiscieListview()
     {
         ObservableList<String> items = FXCollections.observableArrayList();
@@ -128,7 +153,9 @@ public class DistList_New_Presenter {
         na_liscie_listView.setItems(items);
     }
 
-
+    /**
+     * metoda obsługująca kliknięcie guzika w prawo
+     */
     @FXML
     private void onButtonRightClicked()
     {
@@ -155,6 +182,10 @@ public class DistList_New_Presenter {
 
     }
 
+    /**
+     * metoda obsługująca kliknięcie guzika OK
+     * @throws IOException
+     */
     @FXML
     private void onOkButtonClicked() throws IOException {
         if (!saPaczkiNaLiscieRozwozowej())
@@ -208,6 +239,10 @@ public class DistList_New_Presenter {
         }
     }
 
+    /**
+     * metoda obsługująca kliknięcie guzika Anuluj
+     * @throws IOException
+     */
     @FXML
     private void onAnulujButtonClicked() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
@@ -215,6 +250,10 @@ public class DistList_New_Presenter {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * Metoda tworząca listę kurierów bez list rozwozowych
+     * @throws IOException
+     */
     private void listOfCourier() throws IOException {
         listaKurierow= CourierREST_GET();
 
@@ -245,6 +284,10 @@ public class DistList_New_Presenter {
         }
     }
 
+    /**
+     * metoda tworząca listę kurieró do wyświetlenia na ekranie
+     * @throws IOException
+     */
     private void setKurierzy() throws IOException {
         listOfCourier();
         ObservableList<String> options = FXCollections.observableArrayList();
@@ -256,7 +299,10 @@ public class DistList_New_Presenter {
         kurierzy_combo_box.setItems(options);
     }
 
-
+    /**
+     * metoda tworząca listę paczek nie będących na liście rozwozowej
+     * @throws IOException
+     */
     private void listOfPackages() throws IOException {
 
         listaPaczekDoRozwiezienia = PackageREST_GET();
@@ -289,6 +335,10 @@ public class DistList_New_Presenter {
         }
     }
 
+    /**
+     * metoda tworząca listę paczek do wyświetlenia na ekranie
+     * @throws IOException
+     */
     private void setPaczkiDoRozwiezienia() throws IOException {
 
         listOfPackages();
@@ -302,6 +352,9 @@ public class DistList_New_Presenter {
         do_rozwiezienia_listView.setItems(items);
     }
 
+    /**
+     * metoda aktualizująca listę paczek do rozwiezienia po kliknięciu guzika w lewo lub w prawo
+     */
     private void aktualizujPaczkiDoRozwiezienia()
     {
         ObservableList<String> items = FXCollections.observableArrayList();
@@ -314,6 +367,10 @@ public class DistList_New_Presenter {
         do_rozwiezienia_listView.setItems(items);
     }
 
+    /**
+     * pobieranie listy kurierów z serwera
+     * @return Lista kurierów
+     */
     private List<Kurier> CourierREST_GET(){
         RestTemplate restTemplate = new RestTemplate();
         String couriers = restTemplate.getForObject("http://localhost:8080/rest/kurier", String.class);
@@ -333,6 +390,10 @@ public class DistList_New_Presenter {
         return null;
     }
 
+    /**
+     * pobieranie listy paczek z serwera
+     * @return Lista paczek
+     */
     private List<Przesylka> PackageREST_GET(){
 
         RestTemplate restTemplate = new RestTemplate();
@@ -353,6 +414,10 @@ public class DistList_New_Presenter {
         return null;
     }
 
+    /**
+     * metoda zwracająca zaznaczonego kuriera w combo-boxie
+     * @return Wybrany kurier
+     */
     private Kurier getSelectedCourier()
     {
         Kurier toReturn = null;
@@ -369,11 +434,19 @@ public class DistList_New_Presenter {
         return toReturn;
     }
 
+    /**
+     * metodas sprawdzająca czy kurier jest wybrany
+     * @return czy wybrano kuriera
+     */
     private boolean isSelectedCourier()
     {
         return !kurierzy_combo_box.getSelectionModel().isEmpty();
     }
 
+    /**
+     * metoda sprawdzająca czy na liście rozwozowej są przesylki
+     * @return czy są przesylki na liscie rozwozowej
+     */
     private boolean saPaczkiNaLiscieRozwozowej()
     {
         return paczkiNaLiscieRozwozowej.size() !=0;
@@ -384,6 +457,11 @@ public class DistList_New_Presenter {
 
     //Przesylka
 
+    /**
+     * metoda wysyłająca zmienioną przesyłkę na serwer
+     * @param przesylka przesyłka do zmian
+     * @return odpowiedź z serwera
+     */
     private Przesylka packageREST_POST(Przesylka przesylka){
         RestTemplate restTemplate = new RestTemplate();
 
@@ -435,6 +513,11 @@ public class DistList_New_Presenter {
 
     //Kurier
 
+    /**
+     * metoda wysyłająca na serwer zmienionego kuriera
+     * @param kurier kurier do zmian
+     * @return odpowiedź serwera
+     */
     private Kurier courierREST_POST(Kurier kurier){
         RestTemplate restTemplate = new RestTemplate();
         try{
@@ -481,6 +564,11 @@ public class DistList_New_Presenter {
 
     //Lista rozwozowa
 
+    /**
+     * metoda wysyłająca na serwer utworzoną listę rozwozową
+     * @param lista lista do zapisania na serwerze
+     * @return odpowiedź serwer
+     */
     private Lista_rozwozowa distListREST_POST(Lista_rozwozowa lista){
         RestTemplate restTemplate = new RestTemplate();
         try {

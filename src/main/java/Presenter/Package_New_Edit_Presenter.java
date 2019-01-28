@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 /**
- * Created by Kacper on 12.01.2019.
+ * Prezenter dla dodawania paczki do systemu
  */
 public class Package_New_Edit_Presenter {
     @FXML
@@ -34,8 +34,9 @@ public class Package_New_Edit_Presenter {
     private TextField imie_nazwisko_txt, ulica_txt, kod_txt, miejscowosc_txt, koszt_txt;
 
 
-
-
+    /**
+     * metoda inicjalizująca, ustawia content na ekranie
+     */
     @FXML
     public void initialize()
     {
@@ -50,6 +51,13 @@ public class Package_New_Edit_Presenter {
 
     }
 
+    /**
+     * metoda tworząca nową datę
+     * @param year rok
+     * @param month miesiąc
+     * @param day dzień
+     * @return data
+     */
     private Date createDate(int year, int month, int day){
         Calendar calendar = Calendar.getInstance();
         calendar.set(Calendar.YEAR, year);
@@ -61,6 +69,10 @@ public class Package_New_Edit_Presenter {
         return calendar.getTime();
     }
 
+    /**
+     *  metoda tworząca nowego odbiorcę
+     * @return nowy odbiorca
+     */
     private Odbiorca newRecipient()
     {
         String imie_i_nazwisko = imie_nazwisko_txt.getText();
@@ -73,13 +85,21 @@ public class Package_New_Edit_Presenter {
         return toReturn;
     }
 
-
+    /**
+     * metoda tworząca listę do wyświetlenia na ekranie
+     * @param toLoad lista do załadowania a ekran
+     */
     private void setDataToCombo(List<String> toLoad)
     {
         ObservableList<String> options = FXCollections.observableArrayList(toLoad);
         combo.setItems(options);
     }
 
+    /**
+     * metoda tworząca nową przesyłkę
+     * @param recipient_id id odbiorcy
+     * @return nowa przesylka
+     */
     private Przesylka newPackage(int recipient_id)
     {
         double koszt = Double.parseDouble(koszt_txt.getText());
@@ -92,21 +112,39 @@ public class Package_New_Edit_Presenter {
         return toReturn;
     }
 
+    /**
+     * sprawdzanie poprawności formatu kodu pocztowego
+     * @param code kod do sprawdzenia
+     * @return czy poprawny
+     */
     private boolean checkFormatOfCode(String code)
     {
         return code.matches("\\d{2}-\\d{3}");
     }
 
+    /**
+     * sprawdzanie poprawności ceny
+     * @param cena cena do sprawdzenia
+     * @return czy poprawna
+     */
     private boolean checkFormatOfCena(String cena)
     {
         String decimalPattern = "([0-9]*)\\.([0-9]*)";
         return Pattern.matches(decimalPattern, cena);
     }
+
+    /**
+     * zwracanie zaznaczonego przez użytkownika obiektu
+     * @return sposób dostawy
+     */
     private String getSelectedItem()
     {
         return combo.getSelectionModel().getSelectedItem().toString();
     }
 
+    /**
+     * obsługa guzika OK
+     */
     @FXML
     private void onOkButtonClicked() throws IOException {
         //if wszystkie pola są wypełnione
@@ -168,6 +206,9 @@ public class Package_New_Edit_Presenter {
 
     }
 
+    /**
+     * obsługa guzika Anuluj
+     */
     @FXML
     private void onAnulujButtonClicked() throws IOException {
         Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("View/View.fxml"));
@@ -175,6 +216,11 @@ public class Package_New_Edit_Presenter {
         stage.setScene(new Scene(root));
     }
 
+    /**
+     * wysyłąnie na serwer nowej paczki
+     * @param przesylka nowa przesylka
+     * @return odpowiedz serwera
+     */
     private Przesylka packageREST_POST(Przesylka przesylka){
         RestTemplate restTemplate = new RestTemplate();
 
@@ -224,6 +270,11 @@ public class Package_New_Edit_Presenter {
         return null;
     }
 
+    /**
+     * wysyłąnie na serwer odbiorcy
+     * @param odbiorca nowy odbiorca
+     * @return odpowiedź serwera
+     */
     private Odbiorca recipientREST_POST(Odbiorca odbiorca){
         RestTemplate restTemplate = new RestTemplate();
 
