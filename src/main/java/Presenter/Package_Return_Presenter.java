@@ -35,7 +35,7 @@ public class Package_Return_Presenter {
     @FXML
     Label imie_i_naz_nad_przed, ulica_nad_przed, kod_nad_przed, miejscowosc_nad_przed, imie_i_naz_nad_po,
             ulica_nad_po, kod_nad_po, miejscowosc_nad_po, imie_i_naz_od_przed, ulica_od_przed,  kod_odb_przed,
-            miejscowosc_od_przed, imie_i_naz_od_po, ulica_od_po, kod_odb_po, miejscowosc_od_po, status_przed, status_po;
+            miejscowosc_od_przed, imie_i_naz_od_po, ulica_od_po, kod_odb_po, miejscowosc_od_po, status_przed, status_po, numer_id;
 
 
     /**
@@ -210,6 +210,7 @@ public class Package_Return_Presenter {
     {
         status_przed.setText(paczka.getStatus_przesylki());
         status_po.setText("Zwrot");
+        numer_id.setText(paczka.getID().toString());
     }
 
     private boolean udaloSieZmienic = true;
