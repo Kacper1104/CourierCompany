@@ -117,7 +117,7 @@ public class Package_New_Edit_Presenter {
      * @param code kod do sprawdzenia
      * @return czy poprawny
      */
-    private boolean checkFormatOfCode(String code)
+    public boolean checkFormatOfCode(String code)
     {
         return code.matches("\\d{2}-\\d{3}");
     }
